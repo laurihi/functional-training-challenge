@@ -21,13 +21,19 @@
     <ul>
         <li><router-link to="/sample">To default route component</router-link></li>
         <li><router-link to="/alternative">To alternative route component</router-link></li>
+    </ul>
 
-      </ul>
+    <h2>Vuex</h2>
+    <ul>
+      <li><button @click="increment()">Increase count</button> {{ getCount }}</li>
+    </ul>
   </div>
 
 </template>
 
 <script>
+
+  import { mapActions, mapGetters } from 'Vuex'
 
   export default {
     name: 'app',
@@ -35,8 +41,21 @@
       return {
         msg: 'Hello'
       }
+    },
+    methods: {
+      increment() {
+        console.log('Incrementing state')
+        this.incrementState()
+      },
+      ...mapActions( {
+        incrementState: 'incrementCountInState'
+      } )
+    },
+    computed: {
+      ...mapGetters([
+        'getCount' // mappaa getCount-funktion storesta
+      ])
     }
-
   }
 </script>
 
