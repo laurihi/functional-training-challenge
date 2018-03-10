@@ -2,12 +2,15 @@
 
   <div>
     <h2>Päivän suoritukset</h2>
-    <ul>
-      <li v-for="data in exercisesInStaging">
-        <p>{{ data.exercise.name }}, {{ data.units }} {{ data.exercise.unit }}</p>
-        <p><strong>{{ data.points }} POJOA!!</strong></p>
-      </li>
-    </ul>
+    <div class="summary-container">
+      <ul>
+        <li v-for="data in exercisesInStaging">
+          <div>{{ data.exercise.name }}, {{ data.units }} {{ data.exercise.unit }}</div>
+          <div>{{ data.points }} POJOA!!</div>
+        </li>
+      </ul>
+      <button>Tallenna</button>
+    </div>
   </div>
 </template>
 
@@ -24,6 +27,8 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+@import "../assets/styles/components/_ExerciseSummary.scss";
 
 </style>
