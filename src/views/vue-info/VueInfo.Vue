@@ -34,6 +34,7 @@
 <script>
 
   import { mapActions, mapGetters } from 'Vuex'
+  import SportsService from '../../services/SportsService'
 
   export default {
     name: 'app',
