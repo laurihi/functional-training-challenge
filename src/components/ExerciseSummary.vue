@@ -2,12 +2,15 @@
 
   <div>
     <h2>Päivän suoritukset</h2>
-    <ul>
-      <li v-for="data in exercisesToBeAdded">
-        <div>{{ data.exercise.name }}, {{ data.units }} {{ data.exercise.unit }}</div>
-        <div>{{ data.exercise.pointsPerUnit * data.exercise.units }} POJOA!!</div>
-      </li>
-    </ul>
+    <div class="summary-container">
+      <ul>
+        <li v-for="data in exercisesToBeAdded">
+          <div>{{ data.exercise.name }}, {{ data.units }} {{ data.exercise.unit }}</div>
+          <div>{{ data.exercise.pointsPerUnit * data.exercise.units }} POJOA!!</div>
+        </li>
+      </ul>
+      <button>Tallenna</button>
+    </div>
   </div>
 </template>
 
