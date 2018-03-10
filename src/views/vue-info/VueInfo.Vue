@@ -39,7 +39,6 @@
 <script>
 
   import { mapActions, mapGetters } from 'Vuex'
-  import ExerciseService from '../../services/ExerciseService'
 
   export default {
     name: 'app',

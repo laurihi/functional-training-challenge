@@ -19,7 +19,8 @@
   import ExerciseSelector from '../../components/ExerciseSelector'
   import ExerciseService from '../../services/ExerciseService'
 
-    export default {
+
+  export default {
       name: "excercise-form",
       data() {
         return {

@@ -12,8 +12,10 @@
 </template>
 
 <script>
+    import { mapActions } from 'Vuex'
 
     export default {
+
       name: "exercise-selector",
       props: {
         exercise: {
@@ -28,8 +30,12 @@
       methods: {
         selectExercise() {
           console.log('Selecting exercise ' + this.exercise.name)
-          this.$store.state.selectedExercise = this.exercise.name
-        }
+          this.selectActiveExercise(this.exercise)
+        },
+        ...mapActions( {
+          selectActiveExercise: 'selectActiveExercise'
+        } )
+
       },
       mounted(){
         console.log('Exercise selector component ready!')
