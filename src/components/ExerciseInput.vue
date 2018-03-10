@@ -1,8 +1,8 @@
 <template>
 
-  <div>
+  <div v-if="selectedExercise">
     <h2>Lisää valitun suorituksen tiedot</h2>
-    <div v-if="selectedExercise" class="input-container">
+    <div class="input-container">
       <div class="input-selected-name">{{ selectedExercise.name }}</div>
       <input class="input-number" type="text" placeholder="0"/>
       <div class="input-unit">{{ selectedExercise.unit }}</div>
