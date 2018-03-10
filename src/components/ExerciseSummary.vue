@@ -5,10 +5,11 @@
     <div class="summary-container">
       <ul>
         <li v-for="data in exercisesInStaging">
-          <div>{{ data.exercise.name }}, {{ data.units }} {{ data.exercise.unit }}</div>
-          <div>{{ data.points }} POJOA!!</div>
+          <div class="name">{{ data.exercise.name }}, {{ data.units }} {{ data.exercise.unit }}</div>
+          <div class="points">{{ data.points }} POJOA!!</div>
         </li>
       </ul>
+      <div class="summary-total-points">Yhteensä <span>xx</span> pistettä</div>
       <button>Tallenna</button>
     </div>
   </div>

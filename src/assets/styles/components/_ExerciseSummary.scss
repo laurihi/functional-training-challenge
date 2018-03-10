@@ -6,7 +6,13 @@
     border: $amb-unit*0.1 solid $amb-color-black;
     background: $amb-container-ground;
     padding: $amb-unit*2;
+
+    .summary-total-points {
+      font-weight: bold;
+    }
+
+    button {
+
+    }
   }
-
-
 }
