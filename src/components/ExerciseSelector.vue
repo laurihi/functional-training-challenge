@@ -1,7 +1,12 @@
 <template>
 
   <div>
-    Aasdf
+    <div class="exercise-row" @click="selectExercise">
+      <h3 class="name">{{ exercise.name }}</h3>
+      <div class="pointsPerUnit">
+        <p>{{ exercise.pointsPerUnit }} pistettä per {{ exercise.unit }}</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -20,15 +25,13 @@
         }
       },
       methods: {
-        printProps(){
-          console.log(this.exercise.name)
-          console.log(this.exercise.unit)
-          console.log(this.exercise.pointsPerUnit)
+        selectExercise() {
+          console.log('Selecting exercise ' + this.exercise.name)
+          this.$store.state.selectedExercise = this.exercise.name
         }
       },
       mounted(){
-        console.log('Component ready!')
-        this.printProps()
+        console.log('Exercise selector component ready!')
       }
     }
 </script>

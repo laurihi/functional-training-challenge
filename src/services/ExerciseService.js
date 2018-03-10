@@ -5,34 +5,31 @@ class ExerciseService {
 
   constructor(){
 
-    this.exercises = new Map()
+    this.exercises = []
 
-    this.exercises.set( "Työmatkapyöräily", {
+    this.exercises.push({
+      name: 'Työmatkapyöräily',
       unit: 'km',
       pointsPerUnit: 40
     } );
-    this.exercises.set( "Työmatkakävely", {
+    this.exercises.push({
+      name: "Työmatkakävely",
       unit: 'km',
       pointsPerUnit: 60
     } );
-    this.exercises.set( "Työmatkauinti", {
-      unit: 'km',
-      pointsPerUnit: 1500
-    } );
 
-    this.exercises.set( "Portaiden kiipeäminen", {
+    this.exercises.push({
+      name: "Portaiden kiipeäminen",
       unit: 'kerrosta',
       pointsPerUnit: 6
     } );
 
-    this.exercises.set( "Portaiden laskeutuminen", {
+    this.exercises.push({
+      name: "Portaiden laskeutuminen",
       unit: 'kerrosta',
       pointsPerUnit: 2
     } );
-    this.exercises.set( "Lankutus", {
-      unit: 'minuuttia',
-      pointsPerUnit: 50
-    } );
+
 
   }
 
