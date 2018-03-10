@@ -4,19 +4,37 @@
     <h2>Lisää valitun suorituksen tiedot</h2>
     <div v-if="selectedExercise" class="input-container">
       <div class="input-selected-name">{{ selectedExercise.name }}</div>
-      <input class="input-number" type="text" placeholder="0"/>
+      <input class="input-number" @keyup.enter="addExercise" type="text" placeholder="0" v-model="units"/>
       <div class="input-unit">{{ selectedExercise.unit }}</div>
       <div class="input-details">Pisteitä {{ selectedExercise.pointsPerUnit}} per {{ selectedExercise.unit }}</div>
-      <button>Lisää päivän suorituksiin<span class="forward"></span></button>
+      <button @click="addExercise">Lisää päivän suorituksiin<span class="forward"></span></button>
     </div>
   </div>
 </template>
 
 <script>
-  import { mapGetters } from 'Vuex'
+  import { mapActions, mapGetters } from 'Vuex'
 
   export default {
         name: "exercise-input",
+        data: () => {
+          return {
+            units: 0
+          }
+        },
+        methods: {
+          addExercise() {
+            console.log(this.units)
+            const payload = {
+              units: this.units,
+              exercise: this.selectedExercise
+            }
+            this.addExerciseToStaging(payload)
+          },
+          ...mapActions( {
+            addExerciseToStaging: 'addExerciseToStaging'
+          } )
+        },
         computed: {
           ...mapGetters([
             'selectedExercise'

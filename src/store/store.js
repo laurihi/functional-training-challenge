@@ -8,6 +8,9 @@ Vue.use(Vuex)
 const state = {
   count: 0,
   selectedExercise: undefined,
+  exercisesInStaging: [
+
+  ],
   exercisesToBeAdded: [
     {
       exercise: {
@@ -35,10 +38,14 @@ const actions = {
     console.log('selecting exercise action, ' + exercise.name)
     context.commit('selectExercise', exercise);
   },
+  addExerciseToStaging(context, payload){
+    console.log('Adding exercise to staging ' + payload.exercise + ' ' + payload.units)
+    context.commit('doAddExerciseToStaging', payload)
+  },
   incrementCountInState(context){
     console.log('Incrementing count, inside action.')
     context.commit('incrementCount')
-  }
+  },
 
 }
 
@@ -48,6 +55,17 @@ const mutations = {
   selectExercise(state, exercise){
     console.log('selecting exercise mutation, ' + exercise.name)
     state.selectedExercise = exercise
+  },
+  doAddExerciseToStaging(state, payload){
+    const exercise = payload.exercise
+    const units = Number(payload.units)
+    const points = units * Number(payload.exercise.pointsPerUnit)
+    const stagedExercise = {
+      exercise: exercise,
+      units: units,
+      points: points
+    }
+    state.exercisesInStaging.push(stagedExercise)
   },
   incrementCount(state){
     console.log('Incrementing count, inside mutation.')
@@ -61,6 +79,10 @@ const getters = {
   selectedExercise(state){
     console.log('getting selected exercise')
     return state.selectedExercise
+  },
+  exercisesInStaging(stage){
+    console.log('Getting exercises in staging')
+    return state.exercisesInStaging
   },
   getCount(state) {
     console.log('Getting count from getters, returning ' + state.count)

@@ -3,9 +3,9 @@
   <div>
     <h2>Päivän suoritukset</h2>
     <ul>
-      <li v-for="data in exercisesToBeAdded">
+      <li v-for="data in exercisesInStaging">
         <p>{{ data.exercise.name }}, {{ data.units }} {{ data.exercise.unit }}</p>
-        <p><strong>{{ data.exercise.pointsPerUnit * data.exercise.units }} POJOA!!</strong></p>
+        <p><strong>{{ data.points }} POJOA!!</strong></p>
       </li>
     </ul>
   </div>
@@ -18,7 +18,7 @@
         name: "exercise-summary",
       computed: {
         ...mapGetters([
-          'exercisesToBeAdded'
+          'exercisesInStaging'
         ])
       }
     }
