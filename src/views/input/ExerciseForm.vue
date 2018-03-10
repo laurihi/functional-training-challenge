@@ -15,7 +15,7 @@
       </section>
 
       <section>
-        <!-- TODO selected exercise details -->
+        <exercise-input></exercise-input>
       </section>
 
       <section>
@@ -28,12 +28,13 @@
 </template>
 
 <script>
+  import ExerciseInput from '../../components/ExerciseInput'
   import ExerciseSelector from '../../components/ExerciseSelector'
   import ExerciseService from '../../services/ExerciseService'
 
 
   export default {
-      name: "excercise-form",
+      name: "exercise-form",
       data() {
         return {
         }
@@ -47,7 +48,8 @@
       },
       components: {
         // <my-component> will only be available in parent's template
-        'exercise-selector': ExerciseSelector
+        'exercise-selector': ExerciseSelector,
+        'exercise-input': ExerciseInput
       },
       mounted(){
         console.log('Exercise form component ready')

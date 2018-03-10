@@ -7,7 +7,7 @@ Vue.use(Vuex)
 // https://vuex.vuejs.org/en/state.html
 const state = {
   count: 0,
-  selectedExercise: {}
+  selectedExercise: undefined
 }
 
 // https://vuex.vuejs.org/en/actions.html
@@ -29,7 +29,7 @@ const mutations = {
 
   selectExercise(state, exercise){
     console.log('selecting exercise mutation, ' + exercise.name)
-    state.exercise = exercise
+    state.selectedExercise = exercise
   },
   incrementCount(state){
     console.log('Incrementing count, inside mutation.')
@@ -40,8 +40,8 @@ const mutations = {
 // https://vuex.vuejs.org/en/getters.html
 const getters = {
 
-  getSelectedExercise(state){
-    console.log('getting selected exercise, ' + state.exercise.name)
+  selectedExercise(state){
+    console.log('getting selected exercise')
     return state.selectedExercise
   },
   getCount(state) {

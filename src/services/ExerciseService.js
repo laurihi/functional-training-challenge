@@ -20,13 +20,13 @@ class ExerciseService {
 
     this.exercises.push({
       name: "Portaiden kiipeäminen",
-      unit: 'kerrosta',
+      unit: 'kerros',
       pointsPerUnit: 6
     } );
 
     this.exercises.push({
       name: "Portaiden laskeutuminen",
-      unit: 'kerrosta',
+      unit: 'kerros',
       pointsPerUnit: 2
     } );
 
