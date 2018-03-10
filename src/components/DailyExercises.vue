@@ -12,6 +12,8 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+@import "../assets/styles/components/_DailyExercises.scss";
 
 </style>
