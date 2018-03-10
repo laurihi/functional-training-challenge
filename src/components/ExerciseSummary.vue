@@ -1,7 +1,7 @@
 <template>
 
   <div>
-    <h3>Olet lisäämässä seuraavia suorituksia: </h3>
+    <h2>Päivän suoritukset</h2>
     <ul>
       <li v-for="data in exercisesToBeAdded">
         <p>{{ data.exercise.name }}, {{ data.units }} {{ data.exercise.unit }}</p>

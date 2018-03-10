@@ -9,6 +9,7 @@
     <main>
 
       <section class="exercise-selector-wrapper">
+        <h2>Valitse suoritus</h2>
         <ul>
           <exercise-selector :exercise="exercise" v-for="exercise in exercises()"></exercise-selector>
         </ul>
@@ -18,7 +19,7 @@
         <exercise-input></exercise-input>
       </section>
 
-      <section class="exercise-list-wrapper">
+      <section class="exercise-summary-wrapper">
         <exercise-summary></exercise-summary>
       </section>
 
@@ -32,7 +33,6 @@
   import ExerciseInput from '../../components/ExerciseInput'
   import ExerciseSelector from '../../components/ExerciseSelector'
   import ExerciseService from '../../services/ExerciseService'
-
 
   export default {
       name: "exercise-form",

@@ -1,10 +1,12 @@
 <template>
 
   <div>
+    <h2>Lisää valitun suorituksen tiedot</h2>
     <div v-if="selectedExercise" class="input-container">
-    <p>Valittuna: {{ selectedExercise.name }}</p>
-    <input type="text" placeholder="0"/>
-    <p>Pisteitä {{ selectedExercise.pointsPerUnit}} per {{ selectedExercise.unit }}</p>
+      <div class="input-selected-name">{{ selectedExercise.name }}</div>
+      <input class="input-number" type="text" placeholder="0"/>
+      <div class="input-unit">{{ selectedExercise.unit }}</div>
+      <div class="input-details">Pisteitä {{ selectedExercise.pointsPerUnit}} per {{ selectedExercise.unit }}</div>
     </div>
   </div>
 </template>

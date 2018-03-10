@@ -3,8 +3,34 @@
 .exercise-input-wrapper {
 
   .input-container {
+    border: $amb-unit*0.1 solid $amb-color-black;
+    background: rgba(0,0,0,0.1);
+    padding: $amb-unit*2;
+    text-align: center;
+  }
+
+  .input-selected-name,
+  .input-unit {
+    display: block;
+    font-weight: bold;
+    font-size: $amb-font-size*1.6;
+    text-align: center;
+    margin-bottom: $amb-unit*2;
+  }
+
+  .input-number {
+    border: 0;
+    font-size: $amb-font-size*4;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: $amb-color-black;
+    border-radius: $amb-font-size*0.2;
     font-weight: bold;
   }
+
+
 
 
 }

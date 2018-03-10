@@ -10,3 +10,8 @@ $amb-color-white: rgb(255, 255, 255);
 $amb-unit: 10px;
 $amb-font-size: 1em;
 $amb-line-height: 1.5;
+
+$breakpoint-xs: $amb-unit*48;
+$breakpoint-sm: $amb-unit*76.8;
+$breakpoint-md: $amb-unit*99.2;
+$breakpoint-lg: $amb-unit*120;
