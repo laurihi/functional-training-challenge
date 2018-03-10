@@ -4,8 +4,8 @@
     <h2>Päivän suoritukset</h2>
     <ul>
       <li v-for="data in exercisesToBeAdded">
-        <p>{{ data.exercise.name }}, {{ data.units }} {{ data.exercise.unit }}</p>
-        <p><strong>{{ data.exercise.pointsPerUnit * data.exercise.units }} POJOA!!</strong></p>
+        <div>{{ data.exercise.name }}, {{ data.units }} {{ data.exercise.unit }}</div>
+        <div>{{ data.exercise.pointsPerUnit * data.exercise.units }} POJOA!!</div>
       </li>
     </ul>
   </div>
@@ -24,6 +24,8 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+@import "../assets/styles/components/_ExerciseSummary.scss";
 
 </style>
