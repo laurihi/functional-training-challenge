@@ -1,0 +1,14 @@
+@import "../_global.scss";
+
+.exercise-row {
+
+  .name {
+    font-weight: bold;
+  }
+
+  &:hover {
+    background-color: $amb-color-red;
+    color: $amb-color-white;
+  }
+
+}
