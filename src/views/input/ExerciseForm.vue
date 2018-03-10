@@ -8,7 +8,17 @@
 
     <main>
 
-    <exercise-selector :exercise="exercise" v-for="exercise in exercises()"></exercise-selector>
+      <section>
+        <exercise-selector :exercise="exercise" v-for="exercise in exercises()"></exercise-selector>
+      </section>
+
+      <section>
+        <!-- TODO selected exercise details -->
+      </section>
+
+      <section>
+        <!-- TODO list for today's exercises -->
+      </section>
 
     </main>
 
