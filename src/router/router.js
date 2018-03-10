@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import VueInfo from '../views/vue-info/VueInfo'
+import ExcerciseForm from '../views/input/ExcerciseForm'
 
 Vue.use(Router)
 
@@ -31,9 +32,9 @@ export default new Router ({
       }
     },
     {
-      path: '/sample',
-      name: 'sample',
-      component: SampleRouteComponent
+      path: '/excercise',
+      name: 'excercise',
+      component: ExcerciseForm
     },
     {
       path: '/alternative',

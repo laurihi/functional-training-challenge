@@ -27,6 +27,11 @@
     <ul>
       <li><button @click="increment()">Increase count</button> {{ getCount }}</li>
     </ul>
+
+    <h2>UFTC 3.0</h2>
+    <ul>
+      <li><router-link to="/excercise">Kirjaa suoritus</router-link></li>
+    </ul>
   </div>
 
 </template>
