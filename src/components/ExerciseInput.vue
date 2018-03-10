@@ -14,12 +14,6 @@
 
   export default {
         name: "exercise-input",
-        methods: {
-          test(){
-            const result = this.selectedExercise
-            return result
-          }
-        },
         computed: {
           ...mapGetters([
             'selectedExercise'

@@ -19,7 +19,7 @@
       </section>
 
       <section>
-        <!-- TODO list for today's exercises -->
+        <exercise-summary></exercise-summary>
       </section>
 
     </main>
@@ -28,6 +28,7 @@
 </template>
 
 <script>
+  import ExerciseSummary from '../../components/ExerciseSummary'
   import ExerciseInput from '../../components/ExerciseInput'
   import ExerciseSelector from '../../components/ExerciseSelector'
   import ExerciseService from '../../services/ExerciseService'
@@ -48,8 +49,10 @@
       },
       components: {
         // <my-component> will only be available in parent's template
+        ExerciseSummary,
         'exercise-selector': ExerciseSelector,
-        'exercise-input': ExerciseInput
+        'exercise-input': ExerciseInput,
+        'exercise-summary': ExerciseSummary
       },
       mounted(){
         console.log('Exercise form component ready')

@@ -7,7 +7,25 @@ Vue.use(Vuex)
 // https://vuex.vuejs.org/en/state.html
 const state = {
   count: 0,
-  selectedExercise: undefined
+  selectedExercise: undefined,
+  exercisesToBeAdded: [
+    {
+      exercise: {
+        name: 'Työmatkapyöräily',
+        pointsPerUnit: 40,
+        unit: 'km'
+      },
+      units: 100
+    },
+    {
+      exercise: {
+        name: 'Portaiden kiipeäminen',
+        pointsPerUnit: 6,
+        unit: 'kerros'
+      },
+      units: 5
+    },
+  ]
 }
 
 // https://vuex.vuejs.org/en/actions.html
@@ -47,6 +65,9 @@ const getters = {
   getCount(state) {
     console.log('Getting count from getters, returning ' + state.count)
     return state.count
+  },
+  exercisesToBeAdded(state){
+    return state.exercisesToBeAdded
   }
 }
 
