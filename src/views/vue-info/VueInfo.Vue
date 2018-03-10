@@ -30,7 +30,7 @@
 
     <h2>UFTC 3.0</h2>
     <ul>
-      <li><router-link to="/excercise">Kirjaa suoritus</router-link></li>
+      <li><router-link to="exercise">Kirjaa suoritus</router-link></li>
     </ul>
   </div>
 
