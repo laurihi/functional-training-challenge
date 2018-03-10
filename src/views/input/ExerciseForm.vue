@@ -30,7 +30,7 @@
       <div class="daily-score-wrapper">
 
         <section>
-
+          <daily-exercises></daily-exercises>
         </section>
 
       </div>
@@ -44,6 +44,7 @@
   import ExerciseSummary from '../../components/ExerciseSummary'
   import ExerciseInput from '../../components/ExerciseInput'
   import ExerciseSelector from '../../components/ExerciseSelector'
+  import DailyExercises from '../../components/DailyExercises'
   import ExerciseService from '../../services/ExerciseService'
 
   export default {
@@ -64,7 +65,8 @@
         ExerciseSummary,
         'exercise-selector': ExerciseSelector,
         'exercise-input': ExerciseInput,
-        'exercise-summary': ExerciseSummary
+        'exercise-summary': ExerciseSummary,
+        'daily-exercises': DailyExercises
       },
       mounted(){
         console.log('Exercise form component ready')
