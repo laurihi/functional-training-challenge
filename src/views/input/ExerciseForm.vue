@@ -8,20 +8,32 @@
 
     <main>
 
-      <section class="exercise-selector-wrapper">
-        <h2>Valitse suoritus</h2>
-        <ul>
-          <exercise-selector :exercise="exercise" v-for="exercise in exercises()"></exercise-selector>
-        </ul>
-      </section>
+      <div class="add-exercise-wrapper">
 
-      <section class="exercise-input-wrapper">
-        <exercise-input></exercise-input>
-      </section>
+        <section class="exercise-selector-wrapper">
+          <h2>Valitse suoritus</h2>
+          <ul>
+            <exercise-selector :exercise="exercise" v-for="exercise in exercises()"></exercise-selector>
+          </ul>
+        </section>
 
-      <section class="exercise-summary-wrapper">
-        <exercise-summary></exercise-summary>
-      </section>
+        <section class="exercise-input-wrapper">
+          <exercise-input></exercise-input>
+        </section>
+
+        <section class="exercise-summary-wrapper">
+          <exercise-summary></exercise-summary>
+        </section>
+
+      </div>
+
+      <div class="daily-score-wrapper">
+
+        <section>
+
+        </section>
+
+      </div>
 
     </main>
 
