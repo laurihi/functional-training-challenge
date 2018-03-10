@@ -1,13 +1,14 @@
 <template>
 
-  <div>
-    <div class="exercise-row" @click="selectExercise">
-      <h3 class="name">{{ exercise.name }}</h3>
+  <ul>
+    <li class="exercise-row" @click="selectExercise" role="button">
+      <div class="name">{{ exercise.name }}</div>
       <div class="pointsPerUnit">
-        <p>{{ exercise.pointsPerUnit }} pistettä per {{ exercise.unit }}</p>
+        <span>{{ exercise.pointsPerUnit }} pistettä per {{ exercise.unit }}</span>
       </div>
-    </div>
-  </div>
+    </li>
+  </ul>
+
 </template>
 
 <script>

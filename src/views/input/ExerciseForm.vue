@@ -6,7 +6,11 @@
       <h1>UFTC XIII</h1>
     </header>
 
+    <main>
+
     <exercise-selector :exercise="exercise" v-for="exercise in exercises()"></exercise-selector>
+
+    </main>
 
   </div>
 </template>
@@ -41,7 +45,7 @@
 <style lang="scss" scoped>
 
 @import "../../assets/styles/_global.scss";
-
 @import "../../assets/styles/_header.scss";
+@import "../../assets/styles/components/_exercise-selector.scss";
 
 </style>

@@ -7,9 +7,13 @@ html {
   font-size: 16px;
 }
 
-body {
+body * {
   font-size: $amb-font-size;
   line-height: $amb-line-height;
+}
+
+header {
+  margin-bottom: $amb-unit*2;
 }
 
 #app {
@@ -20,5 +24,31 @@ body {
 }
 
 h1 {
+  font-size: $amb-font-size*1.8;
   margin: 0 0 0 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0 0 $amb-unit*2 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    margin: 0 0 0 $amb-unit*4;
+    display: block;
+  }
+}
+
+button {
+  border: $amb-unit*0.1 solid $amb-color-black;
+  padding: $amb-unit*2 $amb-unit*3;
+  cursor: pointer;
+  margin-bottom: $amb-unit*1;
+  display: block;
+
+  &:hover {
+    background-color: $amb-color-red;
+    color: $amb-color-white;
+  }
 }
