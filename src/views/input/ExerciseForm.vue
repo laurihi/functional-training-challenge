@@ -1,10 +1,13 @@
 <template>
 
   <div class="componentContainer">
-    <h1>Holaxxxx!</h1>
-
+    <header>
+      <img src="../../assets/ambientia-logo.svg">
+      <h1>UFTC XIII</h1>
+    </header>
 
     <exercise-selector :exercise="exercise" v-for="exercise in exercises()"></exercise-selector>
+
   </div>
 </template>
 
@@ -36,5 +39,9 @@
 </script>
 
 <style lang="scss" scoped>
+
+@import "../../assets/styles/_global.scss";
+
+@import "../../assets/styles/_header.scss";
 
 </style>
