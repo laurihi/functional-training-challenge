@@ -17,7 +17,6 @@
       },
       methods: {
         printProps(){
-          console.log(this.props.exercise);
         }
       },
       mounted(){

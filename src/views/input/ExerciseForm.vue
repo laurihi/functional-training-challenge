@@ -13,7 +13,6 @@
       name: "excercise-form",
       components: {
         // <my-component> will only be available in parent's template
-        ExerciseSelector,
         'exercise-selector': ExerciseSelector
       }
     }
