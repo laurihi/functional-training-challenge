@@ -28,6 +28,12 @@ h1 {
   margin: 0 0 0 0;
 }
 
+section {
+  display: inline-block;
+  width: 33%;
+  float: left;
+}
+
 ul {
   list-style: none;
   margin: 0 0 $amb-unit*2 0;
@@ -35,20 +41,15 @@ ul {
 
   li {
     list-style: none;
-    margin: 0 0 0 $amb-unit*4;
+    margin: 0 0 $amb-unit*1 0;
     display: block;
-  }
-}
-
-button {
-  border: $amb-unit*0.1 solid $amb-color-black;
-  padding: $amb-unit*2 $amb-unit*3;
-  cursor: pointer;
-  margin-bottom: $amb-unit*1;
-  display: block;
-
-  &:hover {
-    background-color: $amb-color-red;
-    color: $amb-color-white;
+    border: $amb-unit*0.1 solid $amb-color-black;
+    padding: $amb-unit*2 $amb-unit*3;
+    cursor: pointer;
+    -webkit-transition: background-color 100ms ease;
+    -moz-transition: background-color 100ms ease;
+    -ms-transition: background-color 100ms ease;
+    -o-transition: background-color 100ms ease;
+    transition: background-color 100ms ease;
   }
 }

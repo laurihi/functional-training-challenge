@@ -58,6 +58,5 @@
 
 @import "../../assets/styles/_global.scss";
 @import "../../assets/styles/_header.scss";
-@import "../../assets/styles/components/_exercise-selector.scss";
 
 </style>

@@ -35,6 +35,8 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+@import "../assets/styles/components/_ExerciseSelector.scss";
 
 </style>
