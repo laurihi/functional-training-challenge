@@ -27,17 +27,6 @@
     }
 </script>
 
-<style scoped lang="scss">
-
-h1 {
-  font-size: 300%;
-  font-family: Impact;
-}
-
-.componentContainer {
-  h1 {
-    color: red;
-  }
-}
+<style lang="scss" scoped>
 
 </style>

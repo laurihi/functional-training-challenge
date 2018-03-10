@@ -18,33 +18,26 @@
 }
 </script>
 
-<style>
+<style lang="scss">
+
+$amb-color-red: rgb(255, 36, 87);
+$amb-color-orange: rgb(255, 110, 0);
+$amb-color-green: rgb(80, 255, 126);
+$amb-color-blue: rgb(5, 5, 255);
+$amb-color-darkblue: rgb(0, 0, 102);
+$amb-color-magenta: rgb(212, 0, 172);
+$amb-color-black: rgb(0, 0, 0);
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
 #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-  }
-
-h1, h2 {
-    font-weight: normal;
-  }
-
-ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-
-a {
-    color: #42b983;
   }
 
 </style>
