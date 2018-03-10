@@ -1,13 +1,11 @@
 <template>
 
-  <ul>
     <li class="exercise-row" @click="selectExercise" role="button">
       <div class="name">{{ exercise.name }}</div>
       <div class="pointsPerUnit">
         <span>{{ exercise.pointsPerUnit }} pistettä per {{ exercise.unit }}</span>
       </div>
     </li>
-  </ul>
 
 </template>
 

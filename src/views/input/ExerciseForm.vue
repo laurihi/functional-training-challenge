@@ -9,7 +9,9 @@
     <main>
 
       <section>
-        <exercise-selector :exercise="exercise" v-for="exercise in exercises()"></exercise-selector>
+        <ul>
+          <exercise-selector :exercise="exercise" v-for="exercise in exercises()"></exercise-selector>
+        </ul>
       </section>
 
       <section>
