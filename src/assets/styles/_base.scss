@@ -30,13 +30,19 @@ h1 {
 
 section {
   display: inline-block;
-  width: 33%;
+  width: 25%;
   float: left;
 
   margin-right: $amb-unit*4;
 
   &:last-child {
     margin-right: 0;
+  }
+
+  &.exercise-input-wrapper {
+    border: $amb-unit*0.1 solid $amb-color-black;
+    background: rgba(0,0,0,0.1);
+    padding: $amb-unit*2;
   }
 }
 

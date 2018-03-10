@@ -8,17 +8,17 @@
 
     <main>
 
-      <section>
+      <section class="exercise-selector-wrapper">
         <ul>
           <exercise-selector :exercise="exercise" v-for="exercise in exercises()"></exercise-selector>
         </ul>
       </section>
 
-      <section>
+      <section class="exercise-input-wrapper">
         <exercise-input></exercise-input>
       </section>
 
-      <section>
+      <section class="exercise-list-wrapper">
         <exercise-summary></exercise-summary>
       </section>
 
