@@ -6,7 +6,46 @@
     border: $amb-unit*0.1 solid $amb-color-black;
     background: $amb-container-ground;
     padding: $amb-unit*2;
+
+    ul {
+      li {
+
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        .name {
+          font-weight: bold;
+        }
+
+        .points {
+          span {
+          }
+        }
+      }
+    }
+
+    .summary-footer {
+
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .summary-total-points {
+        font-weight: bold;
+        display: inline-block;
+        padding-top: $amb-unit*3;
+      }
+
+      button {
+        display: inline-block;
+        float: right;
+      }
+
+    }
   }
-
-
 }

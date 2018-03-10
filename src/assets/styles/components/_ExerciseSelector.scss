@@ -11,4 +11,22 @@
     color: $amb-color-white;
   }
 
+  &.active {
+    background-color: $amb-color-black;
+    color: $amb-color-white !important;
+    position: relative;
+
+    &:after {
+      content: "\203A";
+      color: $amb-color-red !important;
+      font-weight: bold;
+      font-size: $amb-font-size*4;
+      line-height: $amb-line-height*0;
+      position: absolute;
+      top: $amb-unit*3.5;
+      right: -$amb-unit*3;
+      z-index: 10;
+    }
+  }
+
 }

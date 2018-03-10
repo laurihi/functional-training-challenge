@@ -38,7 +38,6 @@ main {
     section {
       display: block;
       width: 100%;
-      overflow: hidden;
 
       @media (min-width: $breakpoint-md) {
         width: 30%;
@@ -66,7 +65,6 @@ ul {
     display: block;
     border: $amb-unit*0.1 solid $amb-color-black;
     padding: $amb-unit*2 $amb-unit*3;
-    overflow: hidden;
     cursor: pointer;
     -webkit-transition: background-color 100ms ease;
     -moz-transition: background-color 100ms ease;
