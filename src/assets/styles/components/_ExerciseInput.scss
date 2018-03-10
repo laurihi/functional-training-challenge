@@ -28,6 +28,12 @@
     color: $amb-color-black;
     border-radius: $amb-font-size*0.2;
     font-weight: bold;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
   }
 
   button {

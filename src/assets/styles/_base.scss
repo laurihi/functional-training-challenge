@@ -99,3 +99,17 @@ button {
     background: lighten($amb-color-red, 5%);
   }
 }
+
+.daily-score-wrapper {
+  padding: $amb-unit*2;
+
+  section {
+    width: 100%;
+
+    ul {
+      li {
+        border: 0;
+      }
+    }
+  }
+}
