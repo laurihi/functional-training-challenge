@@ -2,7 +2,7 @@
 
   <div class="componentContainer">
     <h1>Holaxxxx!</h1>
-    <exercise-selector exercise="Test"></exercise-selector>
+    <exercise-selector :exercise="exercise"></exercise-selector>
   </div>
 </template>
 
@@ -11,6 +11,15 @@
 
     export default {
       name: "excercise-form",
+      data() {
+        return {
+          exercise: {
+            name: 'Työmatkapyöräily',
+            pointsPerUnit: 50,
+            unit: 'km'
+          }
+        }
+      },
       components: {
         // <my-component> will only be available in parent's template
         'exercise-selector': ExerciseSelector

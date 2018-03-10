@@ -9,7 +9,11 @@
 
     export default {
       name: "exercise-selector",
-      props: ['exercise'],
+      props: {
+        exercise: {
+          type: Object
+        }
+      },
       data() {
         return {
           msg: 'Hello'
@@ -17,6 +21,9 @@
       },
       methods: {
         printProps(){
+          console.log(this.exercise.name)
+          console.log(this.exercise.unit)
+          console.log(this.exercise.pointsPerUnit)
         }
       },
       mounted(){
