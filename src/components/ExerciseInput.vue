@@ -22,6 +22,8 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+@import "../assets/styles/components/_ExerciseInput.scss";
 
 </style>
