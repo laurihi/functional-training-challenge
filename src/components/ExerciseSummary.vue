@@ -2,6 +2,7 @@
 
   <div>
     <h2>Päivän suoritukset</h2>
+    <date-picker :value="selectedDate"></date-picker>
     <div class="summary-container">
       <ul>
         <li v-for="data in exercisesInStaging">
@@ -19,9 +20,15 @@
 
 <script>
   import { mapGetters, mapActions } from 'Vuex'
+  import Datepicker from 'vuejs-datepicker';
 
   export default {
     name: "exercise-summary",
+    data: () => {
+      return {
+        selectedDate: ''
+      }
+    },
     methods: {
       save () {
         this.commitStagedExercises()
@@ -34,6 +41,10 @@
        ...mapGetters([
           'exercisesInStaging'
        ])
+    },
+    components: {
+      'date-picker': Datepicker,
+
     }
   }
 </script>
