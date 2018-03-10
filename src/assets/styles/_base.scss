@@ -37,12 +37,12 @@ main {
   section {
     display: block;
     width: 100%;
+    overflow: hidden;
 
     @media (min-width: $breakpoint-md) {
       width: 30%;
       min-width: $amb-unit*24;
     }
-
 
     margin-right: $amb-unit*4;
 
@@ -52,7 +52,6 @@ main {
 
   }
 }
-
 
 ul {
   list-style: none;
@@ -65,11 +64,38 @@ ul {
     display: block;
     border: $amb-unit*0.1 solid $amb-color-black;
     padding: $amb-unit*2 $amb-unit*3;
+    overflow: hidden;
     cursor: pointer;
     -webkit-transition: background-color 100ms ease;
     -moz-transition: background-color 100ms ease;
     -ms-transition: background-color 100ms ease;
     -o-transition: background-color 100ms ease;
     transition: background-color 100ms ease;
+  }
+}
+
+button {
+  background: $amb-color-red;
+  color: $amb-color-white;
+  padding: $amb-unit*2 $amb-unit*3;
+  cursor: pointer;
+  margin: $amb-unit*2;
+  font-weight: bold;
+
+  .forward {
+    margin: 0 0 0 $amb-unit*0.5;
+
+    &:after {
+      content: "\203A";
+      font-weight: bold;
+      font-size: $amb-font-size*2;
+      line-height: $amb-line-height*0;
+      position: relative;
+      top: $amb-unit*0.3;
+    }
+  }
+
+  &:hover {
+    background: lighten($amb-color-red, 5%);
   }
 }

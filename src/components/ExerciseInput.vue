@@ -7,6 +7,7 @@
       <input class="input-number" type="text" placeholder="0"/>
       <div class="input-unit">{{ selectedExercise.unit }}</div>
       <div class="input-details">Pisteitä {{ selectedExercise.pointsPerUnit}} per {{ selectedExercise.unit }}</div>
+      <button>Lisää päivän suorituksiin<span class="forward"></span></button>
     </div>
   </div>
 </template>
