@@ -1,7 +1,7 @@
 <template>
 
   <div class="componentContainer">
-    <h1>Hola!</h1>
+    <h1>Holaxxxx!</h1>
   </div>
 </template>
 
@@ -11,6 +11,17 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+
+h1 {
+  font-size: 300%;
+  font-family: Impact;
+}
+
+.componentContainer {
+  h1 {
+    color: red;
+  }
+}
 
 </style>
