@@ -7,13 +7,45 @@
     background: $amb-container-ground;
     padding: $amb-unit*2;
 
-    .summary-total-points {
-      font-weight: bold;
-      display: inline-block;
+    ul {
+      li {
+
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        .name {
+          font-weight: bold;
+        }
+
+        .points {
+          span {
+          }
+        }
+      }
     }
 
-    button {
-      display: inline-block;
+    .summary-footer {
+
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .summary-total-points {
+        font-weight: bold;
+        display: inline-block;
+        padding-top: $amb-unit*3;
+      }
+
+      button {
+        display: inline-block;
+        float: right;
+      }
+
     }
   }
 }

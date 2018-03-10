@@ -6,7 +6,7 @@
       <ul>
         <li v-for="data in exercisesInStaging">
           <div class="name">{{ data.exercise.name }}, {{ data.units }} {{ data.exercise.unit }}</div>
-          <div class="points">{{ data.points }} POJOA!!</div>
+          <div class="points"><span>{{ data.points }}</span> pistettä</div>
         </li>
       </ul>
       <div class="summary-footer">
