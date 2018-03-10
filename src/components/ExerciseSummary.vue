@@ -9,22 +9,30 @@
           <div>{{ data.points }} POJOA!!</div>
         </li>
       </ul>
-      <button>Tallenna</button>
+      <button @click="save">Tallenna</button>
     </div>
   </div>
 </template>
 
 <script>
-  import { mapGetters } from 'Vuex'
+  import { mapGetters, mapActions } from 'Vuex'
 
   export default {
-        name: "exercise-summary",
-      computed: {
-        ...mapGetters([
+    name: "exercise-summary",
+    methods: {
+      save () {
+        this.commitStagedExercises()
+      },
+      ...mapActions([
+        'commitStagedExercises'
+      ])
+    },
+    computed: {
+       ...mapGetters([
           'exercisesInStaging'
-        ])
-      }
+       ])
     }
+  }
 </script>
 
 <style lang="scss" scoped>

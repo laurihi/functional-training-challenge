@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
+import moment from 'moment'
 Vue.use(Vuex)
 
 
@@ -11,24 +11,7 @@ const state = {
   exercisesInStaging: [
 
   ],
-  exercisesToBeAdded: [
-    {
-      exercise: {
-        name: 'Työmatkapyöräily',
-        pointsPerUnit: 40,
-        unit: 'km'
-      },
-      units: 100
-    },
-    {
-      exercise: {
-        name: 'Portaiden kiipeäminen',
-        pointsPerUnit: 6,
-        unit: 'kerros'
-      },
-      units: 5
-    },
-  ]
+  dailyExercises: new Map()
 }
 
 // https://vuex.vuejs.org/en/actions.html
@@ -41,6 +24,10 @@ const actions = {
   addExerciseToStaging(context, payload){
     console.log('Adding exercise to staging ' + payload.exercise + ' ' + payload.units)
     context.commit('doAddExerciseToStaging', payload)
+  },
+  commitStagedExercises(context){
+    const date = moment().format("MMM Do YY");
+    context.commit('doCommitDailyExercises', date)
   },
   incrementCountInState(context){
     console.log('Incrementing count, inside action.')
@@ -67,6 +54,13 @@ const mutations = {
     }
     state.exercisesInStaging.push(stagedExercise)
   },
+  doCommitDailyExercises(state, date){
+    const dailyExercises = {
+      date: date,
+      exercises: state.exercisesInStaging
+    }
+    state.dailyExercises.set(date, dailyExercises)
+  },
   incrementCount(state){
     console.log('Incrementing count, inside mutation.')
     state.count = state.count+1
@@ -80,16 +74,16 @@ const getters = {
     console.log('getting selected exercise')
     return state.selectedExercise
   },
-  exercisesInStaging(stage){
+  exercisesInStaging(state){
     console.log('Getting exercises in staging')
     return state.exercisesInStaging
+  },
+  dailyExercises(state){
+    return state.dailyExercises
   },
   getCount(state) {
     console.log('Getting count from getters, returning ' + state.count)
     return state.count
-  },
-  exercisesToBeAdded(state){
-    return state.exercisesToBeAdded
   }
 }
 
