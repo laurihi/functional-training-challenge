@@ -2,7 +2,6 @@
 
   <div>
     <h2>Päivän suoritukset</h2>
-    <date-picker :value="selectedDate"></date-picker>
     <div class="summary-container">
       <ul>
         <li v-for="data in exercisesInStaging">
@@ -11,7 +10,7 @@
         </li>
       </ul>
       <div class="summary-footer">
-        <div class="summary-total-points">Yhteensä <span>xx</span> pistettä</div>
+        <div class="summary-total-points">Yhteensä <span>{{ totalPoints }}</span> pistettä</div>
         <button @click="save()">Tallenna</button>
       </div>
     </div>
@@ -39,7 +38,8 @@
     },
     computed: {
        ...mapGetters([
-          'exercisesInStaging'
+          'exercisesInStaging',
+          'totalPoints'
        ])
     },
     components: {

@@ -81,6 +81,15 @@ const getters = {
   dailyExercises(state){
     return state.dailyExercises
   },
+  totalPoints(state){
+    let points = 0
+    state.exercisesInStaging.forEach(
+      exercise => {
+        points += exercise.points
+      }
+    )
+    return points
+  },
   getCount(state) {
     console.log('Getting count from getters, returning ' + state.count)
     return state.count
