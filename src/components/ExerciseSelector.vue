@@ -1,7 +1,7 @@
 <template>
 
-    <li class="exercise-row" @click="selectExercise" role="button">
-      <div class="name">{{ 'exercise-'+exercise.name  | translate }}</div>
+    <li class="exercise-row" :class="{ active: isCurrentlyActive }" @click="selectExercise" role="button">
+      <div class="name">{{ 'exercise-' + exercise.name  | translate }}</div>
       <div class="pointsPerUnit">
         <span>
           	{{ $t('exercise-gives-amount-points-for-every-unit', { amount: exercise.pointsPerUnit, unit: exercise.unit }) }}
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-    import { mapActions } from 'Vuex'
+    import { mapActions, mapGetters } from 'Vuex'
 
     export default {
 
@@ -20,11 +20,6 @@
       props: {
         exercise: {
           type: Object
-        }
-      },
-      data() {
-        return {
-          msg: 'Hello'
         }
       },
       methods: {
@@ -35,10 +30,14 @@
         ...mapActions( {
           selectActiveExercise: 'selectActiveExercise'
         } )
-
       },
-      mounted(){
-        console.log('Exercise selector component ready!')
+      computed: {
+        isCurrentlyActive() {
+          return this.selectedExercise != undefined && this.selectedExercise === this.exercise;
+        },
+        ...mapGetters({
+          selectedExercise: 'selectedExercise'
+        })
       }
     }
 </script>
