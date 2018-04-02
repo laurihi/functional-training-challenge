@@ -16,7 +16,9 @@
   "exercise-stairs-climbed": "Portaiden kiipeäminen",
   "exercise-stairs-descended": "Portaiden laskeutuminen",
 
-  "exercise-gives-amount-points-for-every-unit": "{amount} pistettä per {unit}"
+  "exercise-gives-amount-points-for-every-unit": "{amount} pistettä per {unit}",
+
+  "scorecard-add-data": "Lisää suorituksesi"
 
 }
 

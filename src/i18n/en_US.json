@@ -16,6 +16,8 @@
   "exercise-stairs-climbed": "Climbing stairs",
   "exercise-stairs-descended": "Descending stairs",
 
-  "exercise-gives-amount-points-for-every-unit": "{amount} points for every {unit}"
+  "exercise-gives-amount-points-for-every-unit": "{amount} points for every {unit}",
+
+  "scorecard-add-data": "Add amount done"
 
 }
