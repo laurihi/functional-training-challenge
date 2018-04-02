@@ -1,4 +1,5 @@
 header {
+  width: 100%;
   img {
     display: inline-block;
     margin-right: $amb-unit*2;
@@ -7,5 +8,10 @@ header {
 
   h1 {
     display: inline-block;
+  }
+
+  div.locale-container {
+    span.locale-selector {
+    }
   }
 }
