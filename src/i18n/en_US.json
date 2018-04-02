@@ -9,7 +9,13 @@
 
   "nav-frontpage": "Frontpage",
   "nav-exercise-form": "Daily Exercises",
-  "nav-all-exercises": "All exercises"
+  "nav-all-exercises": "All exercises",
+
+  "exercise-commute-by-cycling": "Commute by cycling",
+  "exercise-commute-by-walking": "Commute by walking",
+  "exercise-stairs-climbed": "Climbing stairs",
+  "exercise-stairs-descended": "Descending stairs",
+
+  "exercise-gives-amount-points-for-every-unit": "{amount} points for every {unit}"
 
 }
-

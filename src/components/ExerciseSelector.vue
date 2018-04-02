@@ -1,9 +1,11 @@
 <template>
 
     <li class="exercise-row" @click="selectExercise" role="button">
-      <div class="name">{{ exercise.name }}</div>
+      <div class="name">{{ 'exercise-'+exercise.name  | translate }}</div>
       <div class="pointsPerUnit">
-        <span>{{ exercise.pointsPerUnit }} pistettä per {{ exercise.unit }}</span>
+        <span>
+          	{{ $t('exercise-gives-amount-points-for-every-unit', { amount: exercise.pointsPerUnit, unit: exercise.unit }) }}
+        </span>
       </div>
     </li>
 

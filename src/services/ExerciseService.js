@@ -8,24 +8,24 @@ class ExerciseService {
     this.exercises = []
 
     this.exercises.push({
-      name: 'Työmatkapyöräily',
+      name: 'commute-by-cycling',
       unit: 'km',
       pointsPerUnit: 40
     } );
     this.exercises.push({
-      name: "Työmatkakävely",
+      name: "commute-by-walking",
       unit: 'km',
       pointsPerUnit: 60
     } );
 
     this.exercises.push({
-      name: "Portaiden kiipeäminen",
+      name: "stairs-climbed",
       unit: 'kerros',
       pointsPerUnit: 6
     } );
 
     this.exercises.push({
-      name: "Portaiden laskeutuminen",
+      name: "stairs-descended",
       unit: 'kerros',
       pointsPerUnit: 2
     } );
