@@ -28,11 +28,7 @@ const actions = {
   commitStagedExercises(context){
     const date = moment().format("MMM Do YY");
     context.commit('doCommitDailyExercises', date)
-  },
-  incrementCountInState(context){
-    console.log('Incrementing count, inside action.')
-    context.commit('incrementCount')
-  },
+  }
 
 }
 
@@ -60,10 +56,6 @@ const mutations = {
       exercises: state.exercisesInStaging
     }
     state.dailyExercises.set(date, dailyExercises)
-  },
-  incrementCount(state){
-    console.log('Incrementing count, inside mutation.')
-    state.count = state.count+1
   }
 }
 
@@ -89,10 +81,6 @@ const getters = {
       }
     )
     return points
-  },
-  getCount(state) {
-    console.log('Getting count from getters, returning ' + state.count)
-    return state.count
   }
 }
 
