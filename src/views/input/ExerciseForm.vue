@@ -48,11 +48,11 @@
 </template>
 
 <script>
-  import ExerciseSummary from '../../components/ExerciseSummary'
-  import ExerciseInput from '../../components/ExerciseInput'
-  import ExerciseSelector from '../../components/ExerciseSelector'
-  import DailyExercises from '../../components/DailyExercises'
-  import ExerciseService from '../../services/ExerciseService'
+  import ExerciseSummary from 'components/ExerciseSummary'
+  import ExerciseInput from 'components/ExerciseInput'
+  import ExerciseSelector from 'components/ExerciseSelector'
+  import DailyExercises from 'components/DailyExercises'
+  import ExerciseService from 'services/ExerciseService'
 
   import Vue from 'vue';
 
