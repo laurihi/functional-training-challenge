@@ -5,15 +5,15 @@
       <div class="logo">
         <img src="../../assets/pushup-logo.svg">
       </div>
-      <h1>Ultimate Functional Training Challenge</h1>
+      <h1>{{ 'header-add-exercises' | translate }}</h1>
     </header>
-
+    <p></p>
     <main>
 
       <div class="add-exercise-wrapper">
 
         <section class="exercise-selector-wrapper">
-          <h2>Valitse suoritus</h2>
+          <h2>{{ $t('actions-choose-exercise') }}</h2>
           <ul>
             <exercise-selector :exercise="exercise" v-for="exercise in exercises()"></exercise-selector>
           </ul>
