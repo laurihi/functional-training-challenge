@@ -49,13 +49,11 @@
       },
       methods: {
         exercises() {
-          const exer = ExerciseService.getExercises()
-          console.log(exer)
-          return exer
+          const exercise = ExerciseService.getExercises()
+          return exercise
         }
       },
       components: {
-        // <my-component> will only be available in parent's template
         'exercise-selector': ExerciseSelector,
         'exercise-input': ExerciseInput,
         'exercise-summary': ExerciseSummary,

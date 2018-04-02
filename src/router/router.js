@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import ExerciseForm from '../views/input/ExerciseForm'
+import Scorecard from '../views/scorecard/Scorecard'
 import Welcome from '../views/welcome/Welcome'
 
 Vue.use(Router)
@@ -15,9 +15,9 @@ export default new Router ({
       component: Welcome
     },
     {
-      path: '/exercise',
-      name: 'exercise',
-      component: ExerciseForm
+      path: '/scorecard',
+      name: 'scorecard',
+      component: Scorecard
     }
   ]
 })
