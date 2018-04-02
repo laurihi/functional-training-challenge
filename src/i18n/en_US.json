@@ -1,5 +1,15 @@
 {
   "header-add-exercises": "Add New Exercises",
-  "actions-choose-exercise": "Choose your exercise"
+  "header-training-challenge": "Training Challenge",
+
+  "actions-choose-exercise": "Choose your exercise",
+
+  "locale-fi": "In Finnish",
+  "locale-en": "In English",
+
+  "nav-frontpage": "Frontpage",
+  "nav-exercise-form": "Daily Exercises",
+  "nav-all-exercises": "All exercises"
+
 }
 

@@ -1,5 +1,14 @@
 {
   "header-add-exercises": "Lisää suoritus",
-  "actions-choose-exercise": "Valitse laji"
+  "header-training-challenge": "Treenihaaste",
+
+  "actions-choose-exercise": "Valitse laji",
+
+  "locale-fi": "Suomeksi",
+  "locale-en": "Englanniksi",
+
+  "nav-frontpage": "Etusivu",
+  "nav-exercise-form": "Päiväkohtaiset suoritukset",
+  "nav-all-exercises": "Kaikki suoritukset"
 }
 

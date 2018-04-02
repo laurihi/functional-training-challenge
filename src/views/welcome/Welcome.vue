@@ -1,19 +1,20 @@
 <template>
 
   <div class="componentContainer">
-    <h1>Welcome!</h1>
-    <navigation></navigation>
   </div>
 </template>
 
 <script>
-
-  import Navigation from 'components/navigation/Navigation';
   
+  import Navigation from 'components/navigation/Navigation';
+  import LocaleSelector from 'components/locale/LocaleSelector'
+
   export default {
       name: "exercise-form",
       components: {
-        "navigation": Navigation
+        LocaleSelector,
+        "navigation": Navigation,
+        "locale-selector": LocaleSelector
       }
     }
 </script>

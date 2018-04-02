@@ -1,10 +1,10 @@
 <template>
-    <div>
-      <ul>
-        <li><router-link to="/">Frontpage</router-link></li>
-        <li><router-link to="/exercise">Mark your exercises</router-link></li>
-        <li><router-link to="exercise">All exercises</router-link></li>
-      </ul>
+    <div class="app-nav">
+      <nav>
+        <router-link to="/">{{ "nav-frontpage" | translate }}</router-link>
+        <router-link to="/exercise">{{ "nav-exercise-form" | translate }}</router-link>
+        <router-link to="exercise">{{ "nav-all-exercises" | translate }} </router-link>
+      </nav>
     </div>
 </template>
 
