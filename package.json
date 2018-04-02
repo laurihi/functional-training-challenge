@@ -1,8 +1,8 @@
 {
-  "name": "vue-poc",
-  "description": "Ambientia Open Tech Day - VueJS PoC",
+  "name": "functional-training-challenge",
+  "description": "functional training challenge frontend",
   "version": "1.0.0",
-  "author": "laurih",
+  "author": "laurihil",
   "license": "MIT",
   "private": true,
   "scripts": {

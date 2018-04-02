@@ -1,6 +1,6 @@
-# vue-poc
+# functional-training-challenge
 
-> Ambientia Open Tech Day - VueJS PoC
+> Functional training challenge app, frontend.
 
 ## Build Setup
 

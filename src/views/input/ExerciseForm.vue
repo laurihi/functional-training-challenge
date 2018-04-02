@@ -2,8 +2,10 @@
 
   <div class="componentContainer">
     <header>
-      <img src="../../assets/ambientia-logo.svg">
-      <h1>UFTC XIII</h1>
+      <div class="logo">
+        <img src="../../assets/pushup-logo.svg">
+      </div>
+      <h1>Ultimate Functional Training Challenge</h1>
     </header>
 
     <main>
