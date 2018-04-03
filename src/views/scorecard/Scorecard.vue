@@ -7,7 +7,7 @@
         <section class="exercise-selector-wrapper">
           <h2>{{ $t('actions-choose-exercise') }}</h2>
           <ul>
-            <exercise-selector :exercise="exercise" v-for="exercise in exercises()"></exercise-selector>
+            <exercise-selector :exercise="exercise" v-for="exercise in allExercises"></exercise-selector>
           </ul>
         </section>
 
@@ -45,12 +45,20 @@
       name: "exercise-form",
       data() {
         return {
+          allExercises: []
         }
       },
       methods: {
-        exercises() {
-          const exercise = ExerciseService.getExercises()
-          return exercise
+         exercises() {
+           const component = this;
+           ExerciseService.getExercises().then(
+             function(data){
+               data.forEach(exercise => {
+                 component.allExercises.push(exercise)
+               })
+             },
+             function(error){}
+           )
         }
       },
       components: {
@@ -58,6 +66,9 @@
         'exercise-input': ExerciseInput,
         'exercise-summary': ExerciseSummary,
         'daily-exercises': DailyExercises
+      },
+      mounted(){
+        this.exercises()
       }
     }
 </script>
