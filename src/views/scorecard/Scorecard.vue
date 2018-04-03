@@ -5,10 +5,15 @@
       <div class="add-exercise-wrapper">
 
         <section class="exercise-selector-wrapper">
-          <h2>{{ $t('actions-choose-exercise') }}</h2>
-          <ul>
-            <exercise-selector :exercise="exercise" v-for="exercise in allExercises"></exercise-selector>
-          </ul>
+          <template v-if="error === false">
+            <h2>{{ $t('actions-choose-exercise') }}</h2>
+            <ul>
+              <exercise-selector :exercise="exercise" v-for="exercise in allExercises"></exercise-selector>
+            </ul>
+          </template>
+          <template v-else>
+            <p>{{ errorMessage }}</p>
+          </template>
         </section>
 
         <section class="exercise-input-wrapper">
@@ -45,19 +50,23 @@
       name: "exercise-form",
       data() {
         return {
-          allExercises: []
+          allExercises: [],
+          error: false,
+          errorMessage: ''
         }
       },
       methods: {
          exercises() {
-           const component = this;
            ExerciseService.getExercises().then(
-             function(data){
+             function(data) {
                data.forEach(exercise => {
-                 component.allExercises.push(exercise)
+                 this.allExercises.push(exercise)
                })
-             },
-             function(error){}
+             }.bind(this),
+             function(){
+               this.error = true
+               this.errorMessage = 'Unable to get exercises'
+             }.bind(this)
            )
         }
       },
