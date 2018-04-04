@@ -20,5 +20,42 @@
       "unit": "kerros",
       "pointsPerUnit": 2
     }
+  ],
+  "challenges": [
+    {
+      "challengeId": 1,
+      "name": "First Training Challenge",
+      "starts": "20-01-2016",
+      "ends": "20-03-2016",
+      "description": ""
+    },
+    {
+      "challengeId": 2,
+      "name": "Current Training Challenge",
+      "starts": "20-01-2018",
+      "ends": "20-06-2018",
+      "description": ""
+    },
+    {
+      "challengeId": 3,
+      "name": "Future challenge",
+      "starts": "20-01-2019",
+      "ends": "20-03-2019",
+      "description": ""
+    }
+  ],
+  "participants": [
+    {
+      "userId": 1,
+      "name": "Matt McDonald"
+    },
+    {
+      "userId": 2,
+      "name": "John Doe"
+    },
+    {
+      "userId": 1,
+      "name": "Lizzy McGuire"
+    }
   ]
 }
