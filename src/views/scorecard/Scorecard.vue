@@ -44,7 +44,7 @@
   import ExerciseInput from 'components/ExerciseInput'
   import ExerciseSelector from 'components/ExerciseSelector'
   import DailyExercises from 'components/DailyExercises'
-  import ExerciseService from 'services/ExerciseService'
+  import ExerciseService from 'services/exercises/ExerciseService'
   
   export default {
       name: "exercise-form",

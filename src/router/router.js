@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Scorecard from '../views/scorecard/Scorecard'
-import Welcome from '../views/welcome/Welcome'
+import Scorecard from 'views/scorecard/Scorecard'
+import Admin from 'views/admin/ChallengeAdmin'
+import Welcome from 'views/welcome/Welcome'
 
 Vue.use(Router)
 
@@ -18,6 +19,11 @@ export default new Router ({
       path: '/scorecard',
       name: 'scorecard',
       component: Scorecard
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: Admin
     }
   ]
 })
