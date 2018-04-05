@@ -23,21 +23,21 @@
   ],
   "challenges": [
     {
-      "challengeId": 1,
+      "id": 1,
       "name": "First Training Challenge",
       "starts": "20-01-2016",
       "ends": "20-03-2016",
       "description": ""
     },
     {
-      "challengeId": 2,
-      "name": "Current Training Challenge",
+      "id": 2,
+      "name": "Ultimate Training Challenge",
       "starts": "20-01-2018",
       "ends": "20-06-2018",
       "description": ""
     },
     {
-      "challengeId": 3,
+      "id": 3,
       "name": "Future challenge",
       "starts": "20-01-2019",
       "ends": "20-03-2019",
