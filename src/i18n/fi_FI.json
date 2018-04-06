@@ -8,17 +8,20 @@
   "locale-en": "Englanniksi",
 
   "nav-frontpage": "Etusivu",
-  "nav-exercise-form": "Päiväkohtaiset suoritukset",
-  "nav-all-exercises": "Kaikki suoritukset",
+  "nav-exercise-form": "Suoritukset",
+  "nav-all-exercises": "Kokonaistilanne",
 
   "exercise-commute-by-cycling": "Työmatkapyöräily",
   "exercise-commute-by-walking": "Työmatkakävely",
   "exercise-stairs-climbed": "Portaiden kiipeäminen",
   "exercise-stairs-descended": "Portaiden laskeutuminen",
-
   "exercise-gives-amount-points-for-every-unit": "{amount} pistettä per {unit}",
 
-  "scorecard-add-data": "Lisää suorituksesi"
+  "scorecard-add-data": "Lisää suorituksesi",
+
+  "admin-create-new-challenge": "Luo haaste!",
+
+  "input-placeholder-challenge-name": "Haasteen nimi"
 
 }
 
