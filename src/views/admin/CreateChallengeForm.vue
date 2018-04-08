@@ -4,7 +4,7 @@
     <div class="form-challenge container">
       <input placeholder="">
       <h3>Exercises to include:</h3>
-      <includible-exercise :exercise="exercise" v-for="exercise in exercises"></includible-exercise>
+      <includible-exercise v-on:data-changed="exerciseDataChanged" :exercise="exercise" v-for="exercise in exercises"></includible-exercise>
     </div>
   </div>
 </template>
@@ -18,6 +18,12 @@
     data: function() {
       return {
         exercises: []
+      }
+    },
+    methods: {
+      exerciseDataChanged( exercise, included, pointsPerUnit ) {
+        console.log( exercise.name + ' changed');
+        console.log( "Is included = "+ included + ", points per unit " + pointsPerUnit)
       }
     },
     components: {

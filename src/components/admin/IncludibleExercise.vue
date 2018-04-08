@@ -2,45 +2,40 @@
   
   <div class="exercise-row">
     <span>
-      <input type="checkbox"/>
+      <input v-model="selected" type="checkbox" @change="componentChanged"/>
     </span>
     <span>
       {{ 'exercise-'+exercise.name | translate }}
     </span>
     <span>
-      <input type="number">
+      <input v-model="points" type="number" @change="componentChanged">
     </span>
    </div>
 
 </template>
 
 <script>
-  import { mapActions, mapGetters } from 'Vuex'
-  
   export default {
     
-    name: "exercise-selector",
+    name: "includible-exercise",
+    data: function (){
+      return {
+        selected: false,
+        points: 0
+      }
+    },
     props: {
       exercise: {
         type: Object
       }
     },
     methods: {
-      selectExercise() {
-        console.log('Selecting exercise ' + this.exercise.name)
-        this.selectActiveExercise(this.exercise)
-      },
-      ...mapActions( {
-        selectActiveExercise: 'selectActiveExercise'
-      } )
+      componentChanged: function () {
+        this.$emit('data-changed', this.exercise, this.selected, this.points)
+      }
     },
     computed: {
-      isCurrentlyActive() {
-        return this.selectedExercise != undefined && this.selectedExercise === this.exercise;
-      },
-      ...mapGetters({
-        selectedExercise: 'selectedExercise'
-      })
+    
     }
   }
 </script>
