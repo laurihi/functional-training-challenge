@@ -1,6 +1,7 @@
 {
   "header-add-exercises": "Lisää suoritus",
   "header-training-challenge": "Treenihaaste",
+  "header-create-new-challenge": "Luo haaste!",
 
   "actions-choose-exercise": "Valitse laji",
 
@@ -20,6 +21,7 @@
   "scorecard-add-data": "Lisää suorituksesi",
 
   "admin-create-new-challenge": "Luo haaste!",
+
 
   "input-placeholder-challenge-name": "Haasteen nimi"
 
