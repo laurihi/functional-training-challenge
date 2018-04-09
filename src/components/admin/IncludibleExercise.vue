@@ -7,7 +7,7 @@
         <input v-model="selected" type="checkbox" @change="componentChanged"/>
       </span>
       <span class="exercise-label">
-        {{ 'exercise-'+exercise.name | translate }}
+        {{ 'exercise-' + exercise.name | translate }}
       </span>
     </label>
     <span>

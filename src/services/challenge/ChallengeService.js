@@ -24,9 +24,10 @@ class ChallengeService {
     )
 
     challenge.name = challengeDescriptor.challengeName
-    challenge.starts = "20-12-2020"
-    challenge.ends = "20-12-2021"
-    challenge.description = "New challenge"
+    challenge.starts = challengeDescriptor.startsOn
+    challenge.ends = challengeDescriptor.endsOn
+    challenge.description = challengeDescriptor.description
+
     challenge.exercises = exercises
 
 
