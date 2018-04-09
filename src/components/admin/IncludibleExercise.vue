@@ -1,12 +1,15 @@
 <template>
-  
+
   <div class="exercise-row">
-    <span>
-      <input v-model="selected" type="checkbox" @change="componentChanged"/>
-    </span>
-    <span>
-      {{ 'exercise-'+exercise.name | translate }}
-    </span>
+
+    <label>
+      <span class="exercise-selector">
+        <input v-model="selected" type="checkbox" @change="componentChanged"/>
+      </span>
+      <span class="exercise-label">
+        {{ 'exercise-'+exercise.name | translate }}
+      </span>
+    </label>
     <span>
       <input v-model="points" type="number" @change="componentChanged">
     </span>
@@ -16,7 +19,7 @@
 
 <script>
   export default {
-    
+
     name: "includible-exercise",
     data: function (){
       return {
@@ -35,7 +38,7 @@
       }
     },
     computed: {
-    
+
     }
   }
 </script>
