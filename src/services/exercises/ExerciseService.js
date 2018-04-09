@@ -7,7 +7,6 @@ class ExerciseService {
   }
 
   getExercises () {
-
     return new Promise(function(resolve, reject) {
       // Do async job
       axios.get('http://localhost:3000/exercises')

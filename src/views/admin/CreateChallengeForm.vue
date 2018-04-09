@@ -11,6 +11,7 @@
 </template>
 
 <script>
+  import ChallengeService from 'services/challenge/ChallengeService'
   import ExerciseService from 'services/exercises/ExerciseService'
   import IncludibleExercise from 'components/admin/IncludibleExercise'
 
@@ -45,6 +46,17 @@
         console.log( this.challengeForm.challengeName )
         console.log( this.challengeForm.exerciseConfiguration )
 
+        const response = ChallengeService.createChallenge( this.challengeForm )
+
+        response.then(
+          function(){
+            console.log('New challenge added!')
+            this.$router.push("/admin")
+          }.bind(this),
+          function(){
+            console.log('Error adding challenge!')
+          }
+        )
       }
     },
     components: {
