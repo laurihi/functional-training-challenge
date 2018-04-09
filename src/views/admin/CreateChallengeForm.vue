@@ -47,7 +47,6 @@
         console.log( this.challengeForm.exerciseConfiguration )
 
         const response = ChallengeService.createChallenge( this.challengeForm )
-
         response.then(
           function(){
             console.log('New challenge added!')

@@ -10,11 +10,26 @@ class ChallengeService {
     console.log('Creating new challenge: ' + challengeDescriptor)
 
     let challenge = {}
+    let exercises = []
+    const exerciseConfiguration = challengeDescriptor.exerciseConfiguration;
+
+    exerciseConfiguration.forEach(
+      (value) => {
+        const exercise = {}
+        exercise.exerciseName = value.exercise.name
+        exercise.pointsPerUnit = Number(value.pointsPerUnit)
+        exercise.unit = value.exercise.unit
+        exercises.push(exercise)
+      }
+    )
 
     challenge.name = challengeDescriptor.challengeName
     challenge.starts = "20-12-2020"
     challenge.ends = "20-12-2021"
     challenge.description = "New challenge"
+    challenge.exercises = exercises
+
+
 
     return new Promise(function(resolve, reject) {
 

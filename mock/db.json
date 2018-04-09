@@ -27,21 +27,87 @@
       "name": "First Training Challenge",
       "starts": "20-01-2016",
       "ends": "20-03-2016",
-      "description": ""
+      "description": "",
+      "exercises": [
+        {
+          "exerciseName": "commute-by-cycling",
+          "unit": "km",
+          "pointsPerUnit": 40
+        },
+        {
+          "exerciseName": "commute-by-walking",
+          "unit": "km",
+          "pointsPerUnit": 60
+        },
+        {
+          "exerciseName": "climbing-stairs",
+          "unit": "floors",
+          "pointsPerUnit": 6
+        },
+        {
+          "exerciseName": "descending-stairs",
+          "unit": "floors",
+          "pointsPerUnit": 2
+        }
+      ]
     },
     {
       "id": 2,
       "name": "Ultimate Training Challenge",
       "starts": "20-01-2018",
       "ends": "20-06-2018",
-      "description": ""
+      "description": "",
+      "exercises": [
+        {
+          "exerciseName": "commute-by-cycling",
+          "unit": "km",
+          "pointsPerUnit": 40
+        },
+        {
+          "exerciseName": "commute-by-walking",
+          "unit": "km",
+          "pointsPerUnit": 60
+        },
+        {
+          "exerciseName": "climbing-stairs",
+          "unit": "floors",
+          "pointsPerUnit": 6
+        },
+        {
+          "exerciseName": "descending-stairs",
+          "unit": "floors",
+          "pointsPerUnit": 2
+        }
+      ]
     },
     {
       "id": 3,
       "name": "Future challenge",
       "starts": "20-01-2019",
       "ends": "20-03-2019",
-      "description": ""
+      "description": "",
+      "exercises": [
+        {
+          "exerciseName": "commute-by-cycling",
+          "unit": "km",
+          "pointsPerUnit": 40
+        },
+        {
+          "exerciseName": "commute-by-walking",
+          "unit": "km",
+          "pointsPerUnit": 60
+        },
+        {
+          "exerciseName": "climbing-stairs",
+          "unit": "floors",
+          "pointsPerUnit": 6
+        },
+        {
+          "exerciseName": "descending-stairs",
+          "unit": "floors",
+          "pointsPerUnit": 2
+        }
+      ]
     }
   ],
   "participants": [
