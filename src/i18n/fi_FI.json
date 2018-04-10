@@ -15,8 +15,8 @@
 
   "exercise-commute-by-cycling": "Työmatkapyöräily",
   "exercise-commute-by-walking": "Työmatkakävely",
-  "exercise-stairs-climbed": "Portaiden kiipeäminen",
-  "exercise-stairs-descended": "Portaiden laskeutuminen",
+  "exercise-climbing-stairs": "Portaiden kiipeäminen",
+  "exercise-descending-stairs": "Portaiden laskeutuminen",
   "exercise-gives-amount-points-for-every-unit": "{amount} pistettä per {unit}",
 
   "scorecard-add-data": "Lisää suorituksesi",

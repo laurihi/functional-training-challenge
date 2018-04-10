@@ -44,8 +44,9 @@
   import ExerciseInput from 'components/ExerciseInput'
   import ExerciseSelector from 'components/ExerciseSelector'
   import DailyExercises from 'components/DailyExercises'
-  import ExerciseService from 'services/exercises/ExerciseService'
-  
+
+  import ChallengeService from 'services/challenge/ChallengeService'
+
   export default {
       name: "exercise-form",
       data() {
@@ -57,17 +58,18 @@
       },
       methods: {
          exercises() {
-           ExerciseService.getExercises().then(
-             function(data) {
-               data.forEach(exercise => {
-                 this.allExercises.push(exercise)
-               })
-             }.bind(this),
-             function(){
-               this.error = true
-               this.errorMessage = 'Unable to get exercises'
-             }.bind(this)
-           )
+           ChallengeService.currentChallenge()
+             .then(
+               function(data) {
+                 console.log(data.exercises)
+                 data.exercises.forEach(exercise => {
+                   this.allExercises.push(exercise)
+                 })
+               }.bind(this),
+               function( error ) {
+                  console.log('TODO: Error handling ' + error)
+               }
+             )
         }
       },
       components: {

@@ -15,8 +15,8 @@
 
   "exercise-commute-by-cycling": "Commute by cycling",
   "exercise-commute-by-walking": "Commute by walking",
-  "exercise-stairs-climbed": "Climbing stairs",
-  "exercise-stairs-descended": "Descending stairs",
+  "exercise-climbing-stairs": "Climbing stairs",
+  "exercise-descending-stairs": "Descending stairs",
 
   "exercise-gives-amount-points-for-every-unit": "{amount} points for every {unit}",
 

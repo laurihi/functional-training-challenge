@@ -30,23 +30,23 @@
       "description": "",
       "exercises": [
         {
-          "exerciseName": "commute-by-cycling",
+          "name": "commute-by-cycling",
           "unit": "km",
           "pointsPerUnit": 40
         },
         {
-          "exerciseName": "commute-by-walking",
+          "name": "commute-by-walking",
           "unit": "km",
           "pointsPerUnit": 60
         },
         {
-          "exerciseName": "climbing-stairs",
-          "unit": "floors",
+          "name": "climbing-stairs",
+          "unit": "floor",
           "pointsPerUnit": 6
         },
         {
-          "exerciseName": "descending-stairs",
-          "unit": "floors",
+          "name": "descending-stairs",
+          "unit": "floor",
           "pointsPerUnit": 2
         }
       ]
@@ -59,23 +59,23 @@
       "description": "",
       "exercises": [
         {
-          "exerciseName": "commute-by-cycling",
+          "name": "commute-by-cycling",
+          "unit": "km",
+          "pointsPerUnit": 20
+        },
+        {
+          "name": "commute-by-walking",
           "unit": "km",
           "pointsPerUnit": 40
         },
         {
-          "exerciseName": "commute-by-walking",
-          "unit": "km",
-          "pointsPerUnit": 60
-        },
-        {
-          "exerciseName": "climbing-stairs",
-          "unit": "floors",
+          "name": "climbing-stairs",
+          "unit": "floor",
           "pointsPerUnit": 6
         },
         {
-          "exerciseName": "descending-stairs",
-          "unit": "floors",
+          "name": "descending-stairs",
+          "unit": "floor",
           "pointsPerUnit": 2
         }
       ]
@@ -88,23 +88,23 @@
       "description": "",
       "exercises": [
         {
-          "exerciseName": "commute-by-cycling",
+          "name": "commute-by-cycling",
           "unit": "km",
           "pointsPerUnit": 40
         },
         {
-          "exerciseName": "commute-by-walking",
+          "name": "commute-by-walking",
           "unit": "km",
           "pointsPerUnit": 60
         },
         {
-          "exerciseName": "climbing-stairs",
-          "unit": "floors",
+          "name": "climbing-stairs",
+          "unit": "floor",
           "pointsPerUnit": 6
         },
         {
-          "exerciseName": "descending-stairs",
-          "unit": "floors",
+          "name": "descending-stairs",
+          "unit": "floor",
           "pointsPerUnit": 2
         }
       ]
