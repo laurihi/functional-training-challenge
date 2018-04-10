@@ -6,6 +6,7 @@
 </template>
 
 <script>
+  import ChallengeService from 'services/challenge/ChallengeService'
   export default {
       name: "exercise-form",
       data() {
@@ -17,6 +18,12 @@
 
       },
       mounted(){
+        ChallengeService.currentChallengeScoreboard()
+          .then(
+            function(data){
+              console.log("Rows returned:" + data.rows.length)
+            }
+          )
       }
     }
 </script>

@@ -77,6 +77,25 @@ class ChallengeService {
 
     })
   }
+
+  currentChallengeScoreboard() {
+    // http://localhost:3000/scoreboard?challengeId=2
+
+    return new Promise(function(resolve, reject){
+      this.currentChallenge().then(
+        function(data){
+          const challengeId = data.id
+          axios.get('http://localhost:3000/scoreboard?challengeId='+challengeId).then(
+            function(response) {
+              resolve(response.data[0])
+            }
+          )
+        }
+      )
+    }.bind(this)
+    )
+
+  }
 }
 
 export default new ChallengeService()
