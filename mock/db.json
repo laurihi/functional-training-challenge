@@ -123,5 +123,43 @@
       "userId": 1,
       "name": "Lizzy McGuire"
     }
+  ],
+  "scoreboard": [
+    {
+      "challengeId": 1
+    },
+    {
+      "challengeId": 2,
+      "rows": [
+        {
+          "userId": 1,
+          "exercise": "commute-by-cycling",
+          "date": "2018-04-10",
+          "unit": "km",
+          "pointsPerUnit": 40,
+          "amount": 10,
+          "points": 400
+        },
+        {
+          "userId": 1,
+          "exercise": "climbing-stairs",
+          "date": "2018-04-10",
+          "unit": "floor",
+          "pointsPerUnit": 6,
+          "amount": 5,
+          "points": 30
+        },
+
+        {
+          "userId": 2,
+          "exercise": "climbing-stairs",
+          "date": "2018-04-09",
+          "unit": "floor",
+          "pointsPerUnit": 6,
+          "amount": 5,
+          "points": 30
+        }
+      ]
+    }
   ]
 }
