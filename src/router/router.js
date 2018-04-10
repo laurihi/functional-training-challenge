@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+import Scoreboard from 'views/scoreboard/Scoreboard'
 import Scorecard from 'views/scorecard/Scorecard'
 import Admin from 'views/admin/ChallengeAdmin'
 import CreateChallengeForm from 'views/admin/CreateChallengeForm'
@@ -20,6 +21,11 @@ export default new Router ({
       path: '/scorecard',
       name: 'scorecard',
       component: Scorecard
+    },
+    {
+      path: '/scoreboard',
+      name: 'scoreboard',
+      component: Scoreboard
     },
     {
       path: '/admin',
