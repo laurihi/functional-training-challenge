@@ -44,6 +44,6 @@
 
 <style lang="scss" scoped>
 
-@import "../assets/styles/components/_ExerciseSelector.scss";
+@import "../../assets/styles/components/ExerciseSelector";
 
 </style>

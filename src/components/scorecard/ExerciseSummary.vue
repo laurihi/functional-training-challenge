@@ -51,6 +51,6 @@
 
 <style lang="scss" scoped>
 
-@import "../assets/styles/components/_ExerciseSummary.scss";
+@import "../../assets/styles/components/ExerciseSummary";
 
 </style>

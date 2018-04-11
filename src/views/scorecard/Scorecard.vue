@@ -40,9 +40,9 @@
 </template>
 
 <script>
-  import ExerciseSummary from 'components/ExerciseSummary'
-  import ExerciseInput from 'components/ExerciseInput'
-  import ExerciseSelector from 'components/ExerciseSelector'
+  import ExerciseSummary from 'components/scorecard/ExerciseSummary'
+  import ExerciseInput from 'components/scorecard/ExerciseInput'
+  import ExerciseSelector from 'components/scorecard/ExerciseSelector'
   import DailyExercises from 'components/DailyExercises'
 
   import ChallengeService from 'services/challenge/ChallengeService'

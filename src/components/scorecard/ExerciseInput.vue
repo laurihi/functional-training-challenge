@@ -45,6 +45,6 @@
 
 <style lang="scss" scoped>
 
-@import "../assets/styles/components/_ExerciseInput.scss";
+@import "../../assets/styles/components/ExerciseInput";
 
 </style>
