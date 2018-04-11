@@ -7,7 +7,7 @@
       <input class="input-number" @keyup.enter="addExercise" type="number" placeholder="0" v-model="units"/>
       <div class="input-unit">{{ selectedExercise.unit }}</div>
       <div class="input-details">{{ $t('exercise-gives-amount-points-for-every-unit', { amount: selectedExercise.pointsPerUnit, unit: selectedExercise.unit }) }}</div>
-      <button @click="addExercise">Lisää päivän suorituksiin<span class="forward"></span></button>
+      <button @click="addExercise">{{ 'actions-exercise-add-to-daily-score' | translate }}<span class="forward"></span></button>
     </div>
   </div>
 </template>
