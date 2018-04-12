@@ -21,6 +21,8 @@
 
   "exercise-gives-amount-points-for-every-unit": "{amount} points for every {unit}",
 
-  "scorecard-add-data": "Add amount done"
+  "scorecard-add-data": "Add amount done",
+
+  "date-format": "D MMM dd"
 
 }

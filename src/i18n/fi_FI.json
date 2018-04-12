@@ -24,8 +24,9 @@
 
   "admin-create-new-challenge": "Luo haaste!",
 
+  "input-placeholder-challenge-name": "Haasteen nimi",
 
-  "input-placeholder-challenge-name": "Haasteen nimi"
+  "date-format": "dd.MM"
 
 }
 

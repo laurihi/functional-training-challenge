@@ -18,6 +18,7 @@
     margin-bottom: $amb-unit*2;
   }
 
+
   .input-number {
     border: 0;
     font-size: $amb-font-size*4;
@@ -39,8 +40,8 @@
 
   .date-selector-wrapper {
     text-align: center;
+    margin-bottom: $amb-unit*1.6;
   }
-
 
   button {
     margin: $amb-unit*4 $amb-unit*1 $amb-unit*1 $amb-unit*1;

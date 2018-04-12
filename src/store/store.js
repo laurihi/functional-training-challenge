@@ -8,6 +8,7 @@ Vue.use(Vuex)
 const state = {
   count: 0,
   selectedExercise: undefined,
+  selectedDate: undefined,
   exercisesInStaging: [
 
   ],
@@ -20,6 +21,9 @@ const actions = {
   selectActiveExercise(context, exercise){
     console.log('selecting exercise action, ' + exercise.name)
     context.commit('selectExercise', exercise);
+  },
+  selectDate(context, date){
+    context.commit('selectDate', date)
   },
   addExerciseToStaging(context, payload){
     console.log('Adding exercise to staging ' + payload.exercise + ' ' + payload.units)
@@ -38,6 +42,9 @@ const mutations = {
   selectExercise(state, exercise){
     console.log('selecting exercise mutation, ' + exercise.name)
     state.selectedExercise = exercise
+  },
+  selectDate(state, date){
+    state.selectedDate = date
   },
   doAddExerciseToStaging(state, payload){
     const exercise = payload.exercise
@@ -65,6 +72,9 @@ const getters = {
   selectedExercise(state){
     console.log('getting selected exercise')
     return state.selectedExercise
+  },
+  selectedDate(state){
+    return state.selectedDate
   },
   exercisesInStaging(state){
     console.log('Getting exercises in staging')
