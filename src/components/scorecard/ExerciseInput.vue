@@ -18,7 +18,6 @@
 <script>
 
   import { mapActions, mapGetters } from 'vuex'
-  import moment from 'moment';
   import Datepicker from 'vuejs-datepicker';
 
   export default {
@@ -49,10 +48,6 @@
         },
         components: {
           'datepicker': Datepicker
-        },
-        mounted(){
-          const now = moment()
-          this.selectDate(now.toString())
         }
     }
 </script>
