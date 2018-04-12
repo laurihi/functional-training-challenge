@@ -19,7 +19,6 @@
 
   import { mapActions, mapGetters } from 'vuex'
   import Datepicker from 'vuejs-datepicker';
-  import moment from 'moment';
 
   export default {
         name: "exercise-input",
@@ -37,7 +36,7 @@
             this.addExerciseToStaging(payload)
           },
           setDate(date){
-            this.selectDate(moment(date).toString())
+            this.selectDate(date)
           },
           ...mapActions( {
             addExerciseToStaging: 'addExerciseToStaging',

@@ -1,7 +1,7 @@
 <template>
 
   <div>
-    <h2>Päivän suoritukset - {{ selectedDate }}</h2>
+    <h2>Päivän suoritukset - {{ selectedDateFormatted }}</h2>
     <div class="summary-container">
       <ul>
         <li v-for="data in exercisesInStaging">
@@ -21,6 +21,8 @@
   import { mapGetters, mapActions } from 'Vuex'
   import Datepicker from 'vuejs-datepicker';
 
+  import moment from 'moment';
+
   export default {
     name: "exercise-summary",
     data: () => {
@@ -36,6 +38,11 @@
       ])
     },
     computed: {
+      selectedDateFormatted(){
+        moment.locale(this.$i18n.locale());
+
+        return moment(this.selectedDate).format(this.$i18n.translate("moment-date-format"))
+      },
        ...mapGetters([
           'exercisesInStaging',
           'totalPoints',

@@ -26,7 +26,8 @@
 
   "input-placeholder-challenge-name": "Haasteen nimi",
 
-  "date-format": "dd.MM"
+  "date-format": "dd.MM",
+  "moment-date-format": "DD.MM"
 
 }
 

@@ -23,6 +23,7 @@
 
   "scorecard-add-data": "Add amount done",
 
-  "date-format": "D MMM dd"
+  "date-format": "D MMM dd",
+  "moment-date-format": "MMM D"
 
 }

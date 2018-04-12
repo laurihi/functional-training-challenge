@@ -42,8 +42,6 @@
 <script>
   import { mapActions } from 'vuex'
 
-  import moment from 'moment';
-
   import ExerciseSummary from 'components/scorecard/ExerciseSummary'
   import ExerciseInput from 'components/scorecard/ExerciseInput'
   import ExerciseSelector from 'components/scorecard/ExerciseSelector'
@@ -88,8 +86,7 @@
       },
       mounted(){
         this.exercises()
-          const now = moment()
-          this.selectDate(now.toString())
+          this.selectDate(new Date())
       }
     }
 </script>
