@@ -1,7 +1,7 @@
 <template>
 
   <div>
-    <h2>Päivän suoritukset</h2>
+    <h2>Päivän suoritukset - {{ selectedDate }}</h2>
     <div class="summary-container">
       <ul>
         <li v-for="data in exercisesInStaging">
@@ -25,7 +25,6 @@
     name: "exercise-summary",
     data: () => {
       return {
-        selectedDate: ''
       }
     },
     methods: {
@@ -39,7 +38,8 @@
     computed: {
        ...mapGetters([
           'exercisesInStaging',
-          'totalPoints'
+          'totalPoints',
+          'selectedDate'
        ])
     },
     components: {
