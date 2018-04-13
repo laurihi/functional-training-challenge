@@ -4,7 +4,7 @@
     <h2>Päivän suoritukset - {{ selectedDateFormatted }}</h2>
     <div class="summary-container">
       <ul>
-        <li v-for="data in exercisesInStaging">
+        <li v-for="data in dailyExercises">
           <div class="name">{{ data.exercise.name }}, {{ data.units }} {{ data.exercise.unit }}</div>
           <div class="points"><span>{{ data.points }}</span> pistettä</div>
         </li>
@@ -37,7 +37,7 @@
         return moment(this.selectedDate).format(this.$i18n.translate("moment-date-format"))
       },
        ...mapGetters([
-          'exercisesInStaging',
+          'dailyExercises',
           'totalPoints',
           'selectedDate'
        ])

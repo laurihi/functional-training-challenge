@@ -11,22 +11,22 @@ const state = {
   selectedDate: undefined,
   exercises: {
     date: undefined,
-    rows: []
+    data: new Map()
   },
-  dailyExercises: new Map()
+  view: {
+    exercises: []
+  }
 }
 
 const actions = {
 
   selectActiveExercise(context, exercise){
-    console.log('selecting exercise action, ' + exercise.name)
     context.commit('selectExercise', exercise);
   },
   selectDate(context, date){
     context.commit('selectDate', date)
   },
   addDailyExercises(context, payload){
-    console.log('Adding exercise to staging ' + payload.exercise + ' ' + payload.units+', on ' + payload.date)
     context.commit('commitDailyExercises', payload)
   }
 
@@ -43,15 +43,28 @@ const mutations = {
   },
   commitDailyExercises(state, payload){
     const exercise = payload.exercise
-    const units = Number(payload.units)
-    const points = units * Number(payload.exercise.pointsPerUnit)
+    let units = Number(payload.units)
+    let points = units * Number(payload.exercise.pointsPerUnit)
     const date = payload.date
+
+    let currentData = state.exercises.data.get(exercise.name)
+    if(currentData){
+      points += currentData.points
+      units += currentData.units
+    }
     const exerciseDescriptor = {
       exercise: exercise,
       units: units,
       points: points
     }
-    state.exercises.rows.push(exerciseDescriptor)
+    state.exercises.data.set(exercise.name, exerciseDescriptor)
+
+    state.view.exercises = []
+    state.exercises.data.forEach(
+      function(row){
+        this.state.view.exercises.push(row)
+      }.bind(this)
+    )
   }
 }
 
@@ -64,13 +77,13 @@ const getters = {
   selectedDate(state){
     return state.selectedDate
   },
-  exercisesInStaging(state){
+  dailyExercises(state){
     console.log('Getting exercises in staging')
-    return state.exercises.rows
+    return state.view.exercises
   },
   totalPoints(state){
     let points = 0
-    state.exercises.rows.forEach(
+    state.exercises.data.forEach(
       exercise => {
         points += exercise.points
       }
