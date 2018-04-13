@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import moment from 'moment'
+
+
 Vue.use(Vuex)
 
 
-// https://vuex.vuejs.org/en/state.html
 const state = {
   count: 0,
   selectedExercise: undefined,
@@ -16,7 +16,6 @@ const state = {
   dailyExercises: new Map()
 }
 
-// https://vuex.vuejs.org/en/actions.html
 const actions = {
 
   selectActiveExercise(context, exercise){
@@ -33,7 +32,6 @@ const actions = {
 
 }
 
-//https://vuex.vuejs.org/en/mutations.html
 const mutations = {
 
   selectExercise(state, exercise){
@@ -48,16 +46,15 @@ const mutations = {
     const units = Number(payload.units)
     const points = units * Number(payload.exercise.pointsPerUnit)
     const date = payload.date
-    const stagedExercise = {
+    const exerciseDescriptor = {
       exercise: exercise,
       units: units,
       points: points
     }
-    state.exercises.rows.push(stagedExercise)
+    state.exercises.rows.push(exerciseDescriptor)
   }
 }
 
-// https://vuex.vuejs.org/en/getters.html
 const getters = {
 
   selectedExercise(state){
