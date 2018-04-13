@@ -29,17 +29,19 @@
         },
         methods: {
           addExercise() {
+            
             const payload = {
               units: this.units,
-              exercise: this.selectedExercise
+              exercise: this.selectedExercise,
+              date: this.selectedDate
             }
-            this.addExerciseToStaging(payload)
+            this.addDailyExercises(payload)
           },
           setDate(date){
             this.selectDate(date)
           },
           ...mapActions( {
-            addExerciseToStaging: 'addExerciseToStaging',
+            addDailyExercises: 'addDailyExercises',
             selectDate: 'selectDate'
           } )
         },

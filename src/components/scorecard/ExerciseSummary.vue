@@ -11,7 +11,6 @@
       </ul>
       <div class="summary-footer">
         <div class="summary-total-points">Yhteensä <span>{{ totalPoints }}</span> pistettä</div>
-        <button @click="save()">Tallenna</button>
       </div>
     </div>
   </div>
@@ -30,12 +29,6 @@
       }
     },
     methods: {
-      save () {
-        this.commitStagedExercises()
-      },
-      ...mapActions([
-        'commitStagedExercises'
-      ])
     },
     computed: {
       selectedDateFormatted(){
