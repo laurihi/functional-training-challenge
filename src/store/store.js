@@ -9,9 +9,10 @@ const state = {
   count: 0,
   selectedExercise: undefined,
   selectedDate: undefined,
-  exercisesInStaging: [
-
-  ],
+  exercises: {
+    date: undefined,
+    rows: []
+  },
   dailyExercises: new Map()
 }
 
@@ -25,13 +26,9 @@ const actions = {
   selectDate(context, date){
     context.commit('selectDate', date)
   },
-  addExerciseToStaging(context, payload){
-    console.log('Adding exercise to staging ' + payload.exercise + ' ' + payload.units)
-    context.commit('doAddExerciseToStaging', payload)
-  },
-  commitStagedExercises(context){
-    const date = moment().format("MMM Do YY");
-    context.commit('doCommitDailyExercises', date)
+  addDailyExercises(context, payload){
+    console.log('Adding exercise to staging ' + payload.exercise + ' ' + payload.units+', on ' + payload.date)
+    context.commit('commitDailyExercises', payload)
   }
 
 }
@@ -46,23 +43,17 @@ const mutations = {
   selectDate(state, date){
     state.selectedDate = date
   },
-  doAddExerciseToStaging(state, payload){
+  commitDailyExercises(state, payload){
     const exercise = payload.exercise
     const units = Number(payload.units)
     const points = units * Number(payload.exercise.pointsPerUnit)
+    const date = payload.date
     const stagedExercise = {
       exercise: exercise,
       units: units,
       points: points
     }
-    state.exercisesInStaging.push(stagedExercise)
-  },
-  doCommitDailyExercises(state, date){
-    const dailyExercises = {
-      date: date,
-      exercises: state.exercisesInStaging
-    }
-    state.dailyExercises.set(date, dailyExercises)
+    state.exercises.rows.push(stagedExercise)
   }
 }
 
@@ -78,14 +69,11 @@ const getters = {
   },
   exercisesInStaging(state){
     console.log('Getting exercises in staging')
-    return state.exercisesInStaging
-  },
-  dailyExercises(state){
-    return state.dailyExercises
+    return state.exercises.rows
   },
   totalPoints(state){
     let points = 0
-    state.exercisesInStaging.forEach(
+    state.exercises.rows.forEach(
       exercise => {
         points += exercise.points
       }
