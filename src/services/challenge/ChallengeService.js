@@ -94,8 +94,35 @@ class ChallengeService {
       )
     }.bind(this)
     )
-
   }
+
+  currentChallengeWeeklyScores(){
+    const data = {
+
+      weeklyScores: new Map()
+    }
+    const weekNumbers = [6,7,8,9,10]
+    const participants = ['Börje', 'Aimo', 'Pietros']
+
+    data.participants = participants
+
+    weekNumbers.forEach(function(weekNumber){
+
+      const weeklyScoresByUser = []
+
+      participants.forEach(function(participant){
+        const row = {}
+        row.name = participant
+        row.weeklyScore = Math.floor((Math.random() * 750) + 1);
+        weeklyScoresByUser.push(row)
+      }.bind(this))
+      data.weeklyScores.set(weekNumber, weeklyScoresByUser)
+    }.bind(this))
+
+
+    return data
+  }
+
 }
 
 export default new ChallengeService()
