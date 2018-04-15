@@ -2,6 +2,7 @@
   "header-add-exercises": "Lisää suoritus",
   "header-training-challenge": "Treenihaaste",
   "header-create-new-challenge": "Luo haaste!",
+  "header-daily-exercises": "Päivän suoritukset",
 
   "actions-choose-exercise": "Valitse laji",
   "actions-admin-submit-form": "Tallenna",
@@ -18,7 +19,10 @@
   "exercise-commute-by-walking": "Työmatkakävely",
   "exercise-climbing-stairs": "Portaiden kiipeäminen",
   "exercise-descending-stairs": "Portaiden laskeutuminen",
+
   "exercise-gives-amount-points-for-every-unit": "{amount} pistettä per {unit}",
+  "amount-of-points": "pistettä",
+  "points-grand-total": "Yhteensä",
 
   "scorecard-add-data": "Lisää suorituksesi",
 

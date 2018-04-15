@@ -28,6 +28,9 @@ const actions = {
   },
   addDailyExercises(context, payload){
     context.commit('commitDailyExercises', payload)
+  },
+  removeExercise(context, payload){
+    context.commit('removeExercise', payload)
   }
 
 }
@@ -41,7 +44,7 @@ const mutations = {
   selectDate(state, date){
     state.selectedDate = date
   },
-  commitDailyExercises(state, payload){
+  commitDailyExercises(state, payload) {
     const exercise = payload.exercise
     let units = Number(payload.units)
     let points = units * Number(payload.exercise.pointsPerUnit)
@@ -57,7 +60,19 @@ const mutations = {
       units: units,
       points: points
     }
+
     state.exercises.data.set(exercise.name, exerciseDescriptor)
+
+    state.view.exercises = []
+    state.exercises.data.forEach(
+      function(row){
+        this.state.view.exercises.push(row)
+      }.bind(this)
+    )
+  },
+  removeExercise(state, payload){
+    let exercise = state.exercises.data.get(payload)
+    state.exercises.data.delete(payload)
 
     state.view.exercises = []
     state.exercises.data.forEach(
@@ -83,7 +98,7 @@ const getters = {
   },
   totalPoints(state){
     let points = 0
-    state.exercises.data.forEach(
+    state.view.exercises.forEach(
       exercise => {
         points += exercise.points
       }
