@@ -1,16 +1,16 @@
 <template>
 
   <div>
-    <h2>Päivän suoritukset - {{ selectedDateFormatted }}</h2>
+    <h2>{{ 'header-daily-exercises' | translate }} - {{ selectedDateFormatted }}</h2>
     <div class="summary-container">
       <ul>
         <li v-for="data in dailyExercises">
-          <div class="name">{{ data.exercise.name }}, {{ data.units }} {{ data.exercise.unit }}</div>
-          <div class="points"><span>{{ data.points }}</span> pistettä</div>
+          <div class="name">{{ 'exercise-'+data.exercise.name |translate }}, {{ data.units }} {{ data.exercise.unit }}</div>
+          <div class="points"><span>{{ data.points }}</span> {{ 'amount-of-points' | translate }}</div>
         </li>
       </ul>
       <div class="summary-footer">
-        <div class="summary-total-points">Yhteensä <span>{{ totalPoints }}</span> pistettä</div>
+        <div class="summary-total-points">{{ 'points-grand-total' | translate }} <span>{{ totalPoints }}</span> {{ 'amount-of-points' | translate }}</div>
       </div>
     </div>
   </div>

@@ -2,6 +2,7 @@
   "header-add-exercises": "Add New Exercises",
   "header-training-challenge": "Training Challenge",
   "header-create-new-challenge": "Create new challenge",
+  "header-daily-exercises": "Daily exercises",
 
   "actions-choose-exercise": "Choose your exercise",
   "actions-admin-submit-form": "Submit",
@@ -20,6 +21,8 @@
   "exercise-descending-stairs": "Descending stairs",
 
   "exercise-gives-amount-points-for-every-unit": "{amount} points for every {unit}",
+  "amount-of-points": "points",
+  "points-grand-total": "Total of",
 
   "scorecard-add-data": "Add amount done",
 
