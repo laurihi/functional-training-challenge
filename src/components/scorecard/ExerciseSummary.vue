@@ -7,6 +7,7 @@
         <li v-for="data in dailyExercises">
           <div class="name">{{ 'exercise-'+data.exercise.name |translate }}, {{ data.units }} {{ data.exercise.unit }}</div>
           <div class="points"><span>{{ data.points }}</span> {{ 'amount-of-points' | translate }}</div>
+          <span class="remove-exercise" @click="removeExercise(data.exercise.name)">X</span>
         </li>
       </ul>
       <div class="summary-footer">
@@ -29,11 +30,13 @@
       }
     },
     methods: {
+      ...mapActions([
+        'removeExercise'
+      ])
     },
     computed: {
       selectedDateFormatted(){
         moment.locale(this.$i18n.locale());
-
         return moment(this.selectedDate).format(this.$i18n.translate("moment-date-format"))
       },
        ...mapGetters([
