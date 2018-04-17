@@ -40,36 +40,37 @@
 </template>
 
 <script>
-
+  import { mapActions } from 'vuex'
   import ExerciseSummary from 'components/scorecard/ExerciseSummary'
   import ExerciseInput from 'components/scorecard/ExerciseInput'
   import ExercisesByCategory from 'components/scorecard/ExercisesByCategory'
   import DailyExercises from 'components/DailyExercises'
 
 
-  export default {
-      name: "exercise-form",
-      data() {
-        return {
-          categories: ['commuting', 'leisure-time', 'favorites'],
-          error: false,
-          errorMessage: ''
-        }
-      },
-      methods: {
-
-
-      },
-      components: {
-        'exercises-by-category': ExercisesByCategory,
-        'exercise-input': ExerciseInput,
-        'exercise-summary': ExerciseSummary,
-        'daily-exercises': DailyExercises
-      },
-      mounted(){
-        this.selectDate(new Date())
+export default {
+    name: "exercise-form",
+    data() {
+      return {
+        categories: ['commuting', 'leisure-time', 'favorites'],
+        error: false,
+        errorMessage: ''
       }
+    },
+    methods: {
+      ...mapActions( {
+        selectDate: 'selectDate'
+      })
+    },
+    components: {
+      'exercises-by-category': ExercisesByCategory,
+      'exercise-input': ExerciseInput,
+      'exercise-summary': ExerciseSummary,
+      'daily-exercises': DailyExercises
+    },
+    mounted(){
+      this.selectDate(new Date())
     }
+  }
 </script>
 
 <style lang="scss" scoped>
