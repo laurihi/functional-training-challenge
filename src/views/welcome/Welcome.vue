@@ -3,6 +3,7 @@
   <div class="componentContainer">
     <div v-if="currentChallenge">
       <h3>{{ currentChallenge.name + ', ' + currentChallenge.starts + ' - ' + currentChallenge.ends }}</h3>
+      <personal-score></personal-score>
     </div>
     <div v-else>
       <h3>No challenge running</h3>
@@ -14,6 +15,7 @@
   
   import Navigation from 'components/navigation/Navigation';
   import LocaleSelector from 'components/locale/LocaleSelector'
+  import PersonalScore from 'components/challenge-total/PersonalScore'
   import ChallengeService from 'services/challenge/ChallengeService'
   
   export default {
@@ -38,9 +40,11 @@
       }
     },
     components: {
+      PersonalScore,
       LocaleSelector,
-      "navigation": Navigation,
-      "locale-selector": LocaleSelector
+      'navigation': Navigation,
+      'locale-selector': LocaleSelector,
+      'personal-score': PersonalScore
     },
     mounted(){
       this.getCurrentChallenge();

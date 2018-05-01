@@ -8,7 +8,7 @@
           <template v-if="error === false">
             <h2>{{ $t('actions-choose-exercise') }}</h2>
             <ul>
-              <exercise-selector :exercise="exercise" v-for="exercise in allExercises"></exercise-selector>
+              <exercises-by-category :category="category" v-for="category in categories"></exercises-by-category>
             </ul>
           </template>
           <template v-else>
@@ -41,54 +41,36 @@
 
 <script>
   import { mapActions } from 'vuex'
-
   import ExerciseSummary from 'components/scorecard/ExerciseSummary'
   import ExerciseInput from 'components/scorecard/ExerciseInput'
-  import ExerciseSelector from 'components/scorecard/ExerciseSelector'
+  import ExercisesByCategory from 'components/scorecard/ExercisesByCategory'
   import DailyExercises from 'components/DailyExercises'
 
-  import ChallengeService from 'services/challenge/ChallengeService'
 
-  export default {
-      name: "exercise-form",
-      data() {
-        return {
-          allExercises: [],
-          error: false,
-          errorMessage: ''
-        }
-      },
-      methods: {
-         exercises() {
-           ChallengeService.currentChallenge()
-             .then(
-               function(data) {
-                 console.log(data.exercises)
-                 data.exercises.forEach(exercise => {
-                   this.allExercises.push(exercise)
-                 })
-               }.bind(this),
-               function( error ) {
-                  console.log('TODO: Error handling ' + error)
-               }
-             )
-        },
-        ...mapActions( {
-          selectDate: 'selectDate'
-        })
-
-      },
-      components: {
-        'exercise-selector': ExerciseSelector,
-        'exercise-input': ExerciseInput,
-        'exercise-summary': ExerciseSummary,
-        'daily-exercises': DailyExercises
-      },
-      mounted(){
-        this.exercises()
-          this.selectDate(new Date())
+export default {
+    name: "exercise-form",
+    data() {
+      return {
+        categories: ['commuting', 'leisure-time', 'favorites'],
+        error: false,
+        errorMessage: ''
       }
+    },
+    methods: {
+      ...mapActions( {
+        selectDate: 'selectDate'
+      })
+    },
+    components: {
+      'exercises-by-category': ExercisesByCategory,
+      'exercise-input': ExerciseInput,
+      'exercise-summary': ExerciseSummary,
+      'daily-exercises': DailyExercises
+    },
+    mounted(){
+      this.selectDate(new Date())
     }
+  }
 </script>
 
 <style lang="scss" scoped>
