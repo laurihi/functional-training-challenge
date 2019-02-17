@@ -2,7 +2,7 @@
 
   <div class="componentContainer">
     <div v-if="currentChallenge">
-      <h3>{{ currentChallenge.name + ', ' + currentChallenge.starts + ' - ' + currentChallenge.ends }}</h3>
+      <h3>{{ currentChallenge.challengeName + ', ' + currentChallenge.startDate + ' - ' + currentChallenge.endDate }}</h3>
       <personal-score></personal-score>
     </div>
     <div v-else>

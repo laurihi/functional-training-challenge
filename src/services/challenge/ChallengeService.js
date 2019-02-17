@@ -1,6 +1,9 @@
 const axios = require('axios');
 
+const apiBasePath = 'http://localhost:8080'
+
 class ChallengeService {
+
 
   constructor() {
 
@@ -37,7 +40,7 @@ class ChallengeService {
       let headers = {
         'Content-Type': 'application/json'
       }
-      axios.post('http://localhost:3000/challenges', challenge, headers)
+      axios.post(`${apiBasePath}/challenges`, challenge, headers)
         .then(response => {
           console.log(response)
           resolve(response.data)
@@ -53,7 +56,7 @@ class ChallengeService {
 
     return new Promise(function(resolve, reject) {
 
-      axios.get('http://localhost:3000/challenges')
+      axios.get(`${apiBasePath}/challenges`)
         .then(response => {
           resolve(response.data)
         })
@@ -67,7 +70,7 @@ class ChallengeService {
   currentChallenge() {
     return new Promise(function(resolve, reject) {
 
-      axios.get('http://localhost:3000/challenges/current')
+      axios.get(`${apiBasePath}/challenges/ongoing`)
         .then(response => {
           resolve(response.data)
         })
@@ -85,7 +88,7 @@ class ChallengeService {
       this.currentChallenge().then(
         function(data){
           const challengeId = data.id
-          axios.get('http://localhost:3000/scoreboard?challengeId='+challengeId).then(
+          axios.get(`${apiBasePath}/scoreboard?challengeId=${challengeId}`).then(
             function(response) {
               resolve(response.data[0])
             }
