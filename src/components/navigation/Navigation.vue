@@ -4,7 +4,6 @@
         <router-link to="/">{{ "nav-frontpage" | translate }}</router-link>
         <router-link to="/scorecard">{{ "nav-exercise-form" | translate }}</router-link>
         <router-link to="/scoreboard">{{ "nav-all-exercises" | translate }} </router-link>
-        <router-link to="/admin">{{ "nav-admin" | translate }} </router-link>
       </nav>
     </div>
 </template>
