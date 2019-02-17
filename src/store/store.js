@@ -38,7 +38,7 @@ const actions = {
 const mutations = {
 
   selectExercise(state, exercise){
-    console.log('selecting exercise mutation, ' + exercise.name)
+    console.log('selecting exercise mutation, ' + exercise.exerciseKey)
     state.selectedExercise = exercise
   },
   selectDate(state, date){
@@ -50,7 +50,7 @@ const mutations = {
     let points = units * Number(payload.exercise.pointsPerUnit)
     const date = payload.date
 
-    let currentData = state.exercises.data.get(exercise.name)
+    let currentData = state.exercises.data.get(exercise.exerciseKey)
     if(currentData){
       points += currentData.points
       units += currentData.units
@@ -61,7 +61,7 @@ const mutations = {
       points: points
     }
 
-    state.exercises.data.set(exercise.name, exerciseDescriptor)
+    state.exercises.data.set(exercise.exerciseKey, exerciseDescriptor)
 
     state.view.exercises = []
     state.exercises.data.forEach(

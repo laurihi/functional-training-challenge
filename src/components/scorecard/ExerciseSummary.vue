@@ -5,9 +5,9 @@
     <div class="summary-container">
       <ul>
         <li v-for="data in dailyExercises">
-          <div class="name">{{ 'exercise-'+data.exercise.name |translate }}, {{ data.units }} {{ data.exercise.unit }}</div>
+          <div class="name">{{ 'exercise-'+data.exercise.exerciseKey |translate }}, {{ data.units }} {{ data.exercise.unit }}</div>
           <div class="points"><span>{{ data.points }}</span> {{ 'amount-of-points' | translate }}</div>
-          <span class="remove-exercise" @click="removeExercise(data.exercise.name)">X</span>
+          <span class="remove-exercise" @click="removeExercise(data.exercise.exerciseKey)">X</span>
         </li>
       </ul>
       <div class="summary-footer">

@@ -10,42 +10,20 @@
 <script>
 
   import ExerciseSelector from 'components/scorecard/ExerciseSelector'
-  import ChallengeService from 'services/challenge/ChallengeService'
+
     export default {
 
       name: "exercises-by-category",
-      data: function(){
-        return {
-          allExercises: []
-
-        }
-      },
       props: {
+        allExercises: {
+          type: Array
+        },
         category: {
           type: String
         }
       },
-      methods: {
-        exercises() {
-          ChallengeService.currentChallenge()
-            .then(
-              function(data) {
-                console.log(data.exercises)
-                data.exercises.forEach(exercise => {
-                  this.allExercises.push(exercise)
-                })
-              }.bind(this),
-              function( error ) {
-                console.log('TODO: Error handling ' + error)
-              }
-            )
-        }
-      },
       components: {
         'exercise-selector': ExerciseSelector
-      },
-      mounted() {
-        this.exercises()
       }
     }
 </script>

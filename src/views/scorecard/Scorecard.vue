@@ -8,7 +8,7 @@
           <template v-if="error === false">
             <h2>{{ $t('actions-choose-exercise') }}</h2>
             <ul>
-              <exercises-by-category :category="category" v-for="category in categories"></exercises-by-category>
+              <exercises-by-category :allExercises="exercisesByCategory[category]" :category="category" v-for="category in categories"></exercises-by-category>
             </ul>
           </template>
           <template v-else>
@@ -46,14 +46,18 @@
   import ExercisesByCategory from 'components/scorecard/ExercisesByCategory'
   import DailyExercises from 'components/DailyExercises'
 
+  import ExerciseService from 'services/exercises/ExerciseService'
 
-export default {
+
+  export default {
+    
     name: "exercise-form",
     data() {
       return {
-        categories: ['commuting', 'leisure-time', 'favorites'],
+        categories: [],
         error: false,
-        errorMessage: ''
+        errorMessage: '',
+        exercisesByCategory: new Map()
       }
     },
     methods: {
@@ -67,7 +71,24 @@ export default {
       'exercise-summary': ExerciseSummary,
       'daily-exercises': DailyExercises
     },
-    mounted(){
+    mounted() {
+      
+      const exercisesRequest = ExerciseService.getExercisesByCategories();
+      
+      exercisesRequest.then(
+        
+        function(data) {
+          
+          const exercisesByCategory = data.exercisesByCategory
+          this.categories = Object.getOwnPropertyNames(exercisesByCategory)
+          this.exercisesByCategory = exercisesByCategory
+  
+        }.bind(this),
+        function(){
+          console.log('Error');
+        }.bind(this)
+      )
+      
       this.selectDate(new Date())
     }
   }

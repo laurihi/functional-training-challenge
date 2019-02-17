@@ -1,7 +1,7 @@
 <template>
 
     <li class="exercise-row" :class="{ active: isCurrentlyActive }" @click="selectExercise" role="button">
-      <div class="name">{{ 'exercise-' + exercise.name  | translate }}</div>
+      <div class="name">{{ 'exercise-' + exercise.exerciseKey  | translate }}</div>
       <div class="pointsPerUnit">
         <span>
           	{{ $t('exercise-gives-amount-points-for-every-unit', { amount: exercise.pointsPerUnit, unit: exercise.unit }) }}
@@ -24,7 +24,7 @@
       },
       methods: {
         selectExercise() {
-          console.log('Selecting exercise ' + this.exercise.name)
+          console.log('Selecting exercise ' + this.exercise.exerciseKey)
           this.selectActiveExercise(this.exercise)
         },
         ...mapActions( {

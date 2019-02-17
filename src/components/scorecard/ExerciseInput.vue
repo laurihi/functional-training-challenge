@@ -3,7 +3,7 @@
   <div v-if="selectedExercise">
     <h2>{{ "scorecard-add-data" | translate }}</h2>
     <div class="input-container">
-      <div class="input-selected-name">{{ 'exercise-'+selectedExercise.name | translate }}</div>
+      <div class="input-selected-name">{{ 'exercise-'+selectedExercise.exerciseKey | translate }}</div>
 
       <datepicker wrapper-class="date-selector-wrapper" input-class="date-selector" :value="selectedDate" @selected="setDate" :format="'date-format' | translate" :language="$i18n.locale()"></datepicker>
       <input class="input-number" @keyup.enter="addExercise" type="number" placeholder="0" v-model="units"/>
