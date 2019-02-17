@@ -8,8 +8,36 @@ class ExerciseService {
 
   }
 
-  getExercises () {
-    return new Promise(function(resolve, reject) {
+  saveExercise(exercise, units, selectedDate) {
+
+    const payload = {
+      userHandle: "laurih",
+      date: selectedDate,
+      dailyActions: [
+        {
+          exercise: exercise,
+          units: units
+        }
+      ]
+    }
+    let headers = {
+      'Content-Type': 'application/json'
+    }
+    return new Promise(function (resolve, reject) {
+      // Do async job
+      axios.post(`${exerciseApiBasePath}/save`, payload, headers)
+        .then(response => {
+          resolve(response.data)
+        })
+        .catch(error => {
+          reject(error)
+        });
+
+    })
+  }
+
+  getExercises() {
+    return new Promise(function (resolve, reject) {
       // Do async job
       axios.get('http://localhost:3000/exercises')
         .then(response => {
@@ -22,8 +50,8 @@ class ExerciseService {
     })
   }
 
-  getExercisesByCategories () {
-    return new Promise(function(resolve, reject) {
+  getExercisesByCategories() {
+    return new Promise(function (resolve, reject) {
       // Do async job
       axios.get(`${exerciseApiBasePath}/available`)
         .then(response => {

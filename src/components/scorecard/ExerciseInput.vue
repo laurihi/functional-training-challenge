@@ -20,6 +20,8 @@
 
   import { mapActions, mapGetters } from 'vuex'
   import Datepicker from 'vuejs-datepicker';
+  
+  import ExerciseService from 'services/exercises/ExerciseService'
 
   export default {
         name: "exercise-input",
@@ -30,12 +32,12 @@
         },
         methods: {
           addExercise() {
-
             const payload = {
               units: this.units,
               exercise: this.selectedExercise,
               date: this.selectedDate
             }
+            ExerciseService.saveExercise(this.selectedExercise.exerciseKey, this.units, this.selectedDate)
             this.addDailyExercises(payload)
           },
           ...mapActions( {

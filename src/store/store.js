@@ -26,7 +26,7 @@ const actions = {
   selectDate(context, date){
     context.commit('selectDate', date)
   },
-  addDailyExercises(context, payload){
+  addDailyExercises(context, payload) {
     context.commit('commitDailyExercises', payload)
   },
   removeExercise(context, payload){
