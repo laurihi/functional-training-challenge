@@ -7,8 +7,9 @@
         <section class="exercise-selector-wrapper">
           <template v-if="error === false">
             <h2>{{ $t('actions-choose-exercise') }}</h2>
+  
             <ul>
-              <exercises-by-category :allExercises="exercisesByCategory[category]" :category="category" v-for="category in categories"></exercises-by-category>
+              <exercises-by-category :allExercises="exercisesByCategory[category]" :category="category" v-for="category in categories" :key="category"></exercises-by-category>
             </ul>
           </template>
           <template v-else>

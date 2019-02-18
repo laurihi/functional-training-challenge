@@ -2,7 +2,7 @@
   <li>
     <span>Exercises in {{ category }}</span>
     <ul>
-      <exercise-selector :exercise="exercise" v-for="exercise in allExercises"></exercise-selector>
+      <exercise-selector :exercise="exercise" v-for="exercise in allExercises" :key="exercise.exerciseKey"></exercise-selector>
     </ul>
   </li>
 </template>

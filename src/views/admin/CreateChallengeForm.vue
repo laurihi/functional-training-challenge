@@ -12,7 +12,7 @@
       <datepicker v-model="challengeForm.endsOn" name="endsOn" placeholder="Ends on" ></datepicker>
   
       <h3>Exercises to include:</h3>
-      <includible-exercise v-on:data-changed="exerciseDataChanged" :exercise="exercise" v-for="exercise in exercises"></includible-exercise>
+      <includible-exercise v-on:data-changed="exerciseDataChanged" :exercise="exercise" v-for="exercise in exercises" :key="exercise.name"></includible-exercise>
       <button @click="submit()">{{ 'actions-admin-submit-form' | translate }}</button>
     </div>
   </div>

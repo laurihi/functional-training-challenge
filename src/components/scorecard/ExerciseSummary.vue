@@ -18,7 +18,7 @@
 </template>
 
 <script>
-  import { mapGetters, mapActions } from 'Vuex'
+  import { mapGetters, mapActions } from 'vuex'
   import Datepicker from 'vuejs-datepicker';
 
   import moment from 'moment';
